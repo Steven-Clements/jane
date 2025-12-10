@@ -1,4 +1,4 @@
-# Jane
+# Meet Jane
 
 Zero‑side‑effect normalization and validation helpers for JavaScript.
 

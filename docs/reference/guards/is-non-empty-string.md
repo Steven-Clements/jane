@@ -12,7 +12,7 @@ function isNonEmptyString(value: unknown): value is string
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | Checks whether a value is a primitive string with `length > 0`, without trimming or normalization. |
 
 ## Returns
 

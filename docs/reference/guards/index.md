@@ -11,10 +11,15 @@ Each type guard has its own reference page with examples and edge cases.
 - [isArray](is-array.md): Checks whether a value is an array.
 - [isBoolean](is-boolean.md): Checks whether a value is a boolean.
 - [isDate](is-date.md): Checks whether a value is a date.
+- [isEnumValue](is-enum-value.md): Checks whether a value is an enum value.
 - [isFunction](is-function.md): Checks whether a value is a function.
 - [isInteger](is-integer.md): Checks whether a value is an integer.
 - [isNonEmptyString](is-non-empty-string.md): Checks for a non‑empty string.
 - [isNumber](is-number.md): Checks whether a value is a number.
+- [isObject](is-object.md): Checks whether a value is an object.
+- [isPlainObject](is-plain-object.md): Checks whether a value is a plain object.
+- [isPromise](is-promise.md): Checks whether a value is a promise.
+- [isRecord](is-record.md): Checks whether a value is a record.
 - [isString](is-string.md): Checks whether a value is a string.
 
 ## When to use type guards

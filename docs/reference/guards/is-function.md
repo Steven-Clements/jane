@@ -10,7 +10,7 @@ function isFunction(value: unknown): value is Function
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | The value to check. Must be a callable function to return `true`. |
 
 ## Returns
 

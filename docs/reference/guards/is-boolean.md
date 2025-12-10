@@ -1,6 +1,6 @@
 # isBoolean
 
-Checks whether a value is a boolean. This helper never throws and never mutates input. Use it when you need to confirm boolean types before running normalization or validation.
+Checks whether a value is a *boolean*. This helper never throws and never mutates input. Use it when you need to confirm boolean types before running normalization or validation.
 
 ## Signature
 

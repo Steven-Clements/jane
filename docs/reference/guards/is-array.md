@@ -1,6 +1,6 @@
 # isArray
 
-Checks whether a value is an array. This helper never throws and never mutates input. Use it when you need to confirm that a value is an array before running normalization or validation.
+Checks whether a value is an *array*. This helper never throws and never mutates input. Use it when you need to confirm that a value is an array before running normalization or validation.
 
 ## Signature
 

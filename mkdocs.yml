@@ -12,9 +12,18 @@ nav:
     - Overview: reference/overview.md
     - Type guards:
       - Overview: reference/guards/index.md
+      - isArray: reference/guards/is-array.md
+      - isBoolean: reference/guards/is-boolean.md
+      - isDate: reference/guards/is-date.md
+      - isEnumValue: reference/guards/is-enum-value.md
+      - isFunction: reference/guards/is-function.md
       - isInteger: reference/guards/is-integer.md
       - isNonEmptyString: reference/guards/is-non-empty-string.md
       - isNumber: reference/guards/is-number.md
+      - isObject: reference/guards/is-object.md
+      - isPlainObject: reference/guards/is-plain-object.md
+      - isPromise: reference/guards/is-promise.md
+      - isRecord: reference/guards/is-record.md
       - isString: reference/guards/is-string.md
   - Contributing:
     - Overview: contributing/index.md

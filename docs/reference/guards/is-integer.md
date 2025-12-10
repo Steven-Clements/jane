@@ -12,7 +12,7 @@ function isInteger(value: unknown): value is number
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite integers*. |
 
 ## Returns
 
