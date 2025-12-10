@@ -1,12 +1,18 @@
 # isNonEmptyString
 
-Checks whether a value is a **primitive, non‑empty string**. This helper never throws and never mutates input. It performs a strict `typeof` check and does not trim or normalize the value.
+Checks whether a value is a *primitive, non‑empty string*. This helper never throws and never mutates input. It performs a strict `typeof` check and does not trim or normalize the value.
 
 ## Signature
 
 ```ts
 function isNonEmptyString(value: any): value is string
 ```
+
+## Parameters
+
+| Name | Data type | Description |
+|---|---|---|
+| value | `any` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
 
 ## Returns
 
@@ -15,8 +21,9 @@ A boolean:
 - `true`: If the value is a primitive string with length greater than 0.
 - `false` Otherwise.
 
+## Examples
+
 ```ts
-Examples
 isNonEmptyString("hello")            // true
 isNonEmptyString(" ")                // true (whitespace counts as non-empty)
 isNonEmptyString("")                 // false

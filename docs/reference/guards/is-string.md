@@ -1,8 +1,6 @@
 # isString
 
-Checks whether a value is a **primitive string**.  
-This helper never throws and never mutates input. It performs a strict `typeof`
-check and does not coerce values.
+Checks whether a value is a *primitive string*. This helper never throws and never mutates input. It performs a strict `typeof` check and does not coerce values.
 
 ## Signature
 
@@ -12,7 +10,9 @@ function isString(value: any): value is string
 
 ## Parameters
 
-- `value`: Any value to check.
+| Name | Data type | Description |
+|---|---|---|
+| value | `any` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
 
 ## Returns
 

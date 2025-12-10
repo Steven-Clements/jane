@@ -8,12 +8,16 @@ exclude:
 
 nav:
   - Meet Jane: index.md
-  - Contributing:
-    - Follow the development workflow: contributing/development-workflow.md
-    - Restricted files and directories: contributing/restricted-files-and-directories.md
   - Reference:
     - Overview: reference/overview.md
-    - Type guards: reference/guards/is-string.md
-    - isString: reference/guards/is-string.md
-    - isNonEmptyString: reference/guards/is-non-empty-string.md
+    - Type guards:
+      - Overview: reference/guards/index.md
+      - isString: reference/guards/is-string.md
+      - isNonEmptyString: reference/guards/is-non-empty-string.md
+      - isNumber: reference/guards/is-number.md
+      - isInteger: reference/guards/is-integer.md
+  - Contributing:
+    - Overview: contributing/index.md
+    - Development workflow: contributing/development-workflow.md
+    - Restricted repo files: contributing/restricted-repo-files.md
   - Changelog: ../CHANGELOG.md

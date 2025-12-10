@@ -1,4 +1,4 @@
-# Restricted files and directories
+# Restricted repo files
 
 This project uses automated tooling for releases, formatting, documentation, and configuration.  
 

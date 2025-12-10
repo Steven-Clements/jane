@@ -47,7 +47,7 @@ If you’ve ever written your own tiny normalizers and validators because existi
 ## Installation
 
 ```bash
-npm install @clementine-solutions/jane
+npm install @steven-clements/jane
 ```
 
 ---
@@ -58,6 +58,7 @@ Documentation is available at:
 
 - [Project overview](index.md)
 - [Reference](reference/overview.md)
+- [Contributing](contributing/overview.md)
 
 ## License
 
@@ -67,6 +68,6 @@ Jane is licensed under the Apache License, Version 2.0.
 
 ## Author
 
-Clementine Technology Solutions LLC
+Steven "Chris" Clements
 
 Designed for clarity, composability, and long‑term maintainability.
