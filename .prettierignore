@@ -1,2 +1,9 @@
+# Exclude Markdown
 *.md
-docs/**/*.md
+**/*.md
+
+# Exclude YAML
+*.yml
+*.yaml
+**/*.yml
+**/*.yaml

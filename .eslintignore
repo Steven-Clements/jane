@@ -1,0 +1,9 @@
+# Ignore Markdown
+*.md
+**/*.md
+
+# Ignore YAML
+*.yml
+*.yaml
+**/*.yml
+**/*.yaml

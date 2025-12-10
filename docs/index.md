@@ -56,8 +56,8 @@ npm install @clementine-solutions/jane
 
 Documentation is available at:
 
-- [Project overview](./index.md)
-- [Reference](./reference/overview.md)
+- [Project overview](index.md)
+- [Reference](reference/overview.md)
 
 ## License
 

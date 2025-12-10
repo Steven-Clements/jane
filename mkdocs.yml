@@ -7,11 +7,11 @@ theme: material
 nav:
   - Meet Jane: index.md
   - Contributing:
-      - Follow the development workflow: contributing/development-workflow.md
-      - Restricted files and directories: contributing/restricted-files-and-directories.md
+    - Follow the development workflow: contributing/development-workflow.md
+    - Restricted files and directories: contributing/restricted-files-and-directories.md
   - Reference:
-      - Overview: reference/overview.md
-      - Type guards: reference/guards/is-string.md
-      - isString: reference/guards/is-string.md
-      - isNonEmptyString
+    - Overview: reference/overview.md
+    - Type guards: reference/guards/is-string.md
+    - isString: reference/guards/is-string.md
+    - isNonEmptyString: reference/guards/is-non-empty-string.md
   - Changelog: ../CHANGELOG.md
