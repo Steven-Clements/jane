@@ -4,12 +4,13 @@ Checks whether a value is a valid JSON value. This helper performs a strict, rec
 
 A JSON value is one of:
 
-- null
-- a boolean
-- a finite number
-- a string
-- an array of JSON values
-- a plain object whose values are JSON values
+- `null`.
+- `boolean`.
+- A finite number (`NaN`, `Infinity`, and `-Infinity` are not allowed).
+- `string`.
+- An array of JSON values.
+
+a plain object ({}) whose values are JSON values (objects with custom prototypes, for example, `Date`, `Map`, `Set`, or class instances, are rejected)
 
 ## Signature
 
@@ -21,7 +22,7 @@ function isJSON(value: unknown): value is JSONValue
 
 | Name | Data type | Description |
 |---|---|---|
-| name | `unknown` | The value to check. Must be a valid JSON value to return `true`. |
+| value | `unknown` | The value to check. Must conform to JSON structural rules to return `true`. |
 
 ## Returns
 
@@ -33,20 +34,34 @@ A boolean:
 Examples
 
 ```ts
-isJSON({ a: 1, b: [true, null] })   // true
-isJSON([1, 2, 3])                   // true
-isJSON('hello')                     // true
+isJSON(null)                     // true
+isJSON(true)                     // true
+isJSON(123)                      // true
+isJSON('abc')                    // true
+isJSON([1, 'a', null])           // true
+isJSON({ a: 1, b: [true, null] }) // true
 
-isJSON(undefined)                   // false
-isJSON(() => {})                    // false
-isJSON(new Date())                  // false
-isJSON({ a: undefined })            // false
+isJSON(NaN)                      // false
+isJSON(Infinity)                 // false
+isJSON(undefined)                // false
+isJSON(() => {})                 // false
+isJSON(new Date())               // false
+isJSON({ a: undefined })         // false
+
+// Circular references are rejected
+const arr: unknown[] = [];
+arr.push(arr);
+isJSON(arr)                      // false
+
+const obj: Record<string, unknown> = {};
+obj['self'] = obj;
+isJSON(obj)                       // false
 ```
 
 ## Notes
 
 - Rejects non‑finite numbers (`NaN`, `Infinity`).
 - Rejects objects with custom prototypes (including `Date`, `Map`, `Set`, class instances).
-- Rejects functions, symbols, bigint, and undefined.
+- Rejects functions, symbols, bigint, and `undefined`.
 - Rejects circular structures.
 - This guard is *structural*, not behavioral — it does not call `JSON.stringify`.

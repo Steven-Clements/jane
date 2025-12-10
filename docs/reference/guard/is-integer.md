@@ -37,5 +37,6 @@ isInteger(null)        // false
 ## Notes
 
 - This helper uses `Number.isInteger` internally, which rejects `NaN`, `Infinity`, and `-Infinity`.
+- BigInt values are not considered integers by this helper. Use `isBigInteger` for BigInt checks.
 - Use `normalizeInteger` if you need to convert values into integers.
 - Use `validateInteger` if you need a `Result<T>` instead of a boolean.

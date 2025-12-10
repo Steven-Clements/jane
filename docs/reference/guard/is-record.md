@@ -1,6 +1,14 @@
 # isRecord
 
-Checks whether a value is a *record-like object*. That is, a non‑null, non‑array object whose keys are strings. This helper never throws and never mutates input. Use it when you need to confirm that a value is suitable for string‑keyed object operations before running normalization or validation.
+Checks whether a value is a record-like object with string keys.
+
+A record is defined as:
+
+1. A non-null, non-array object.
+2. All own property keys are *strings* (symbols are not allowed).
+3. Objects with any prototype are accepted, including class instances and objects created with `Object.create(null)`.
+
+This helper never throws and never mutates input. Use it when you need to confirm that a value is suitable for *string-keyed object operations* before running normalization or validation.
 
 ## Signature
 
@@ -12,7 +20,7 @@ function isRecord(value: unknown): value is Record<string, unknown>
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | The value to check. Must be a non‑null, non‑array object to return `true`. |
+| value | `unknown` | The value to check. Must be a non-null, non-array object whose own keys are strings to return `true`. |
 
 ## Returns
 
@@ -37,7 +45,8 @@ isRecord(123)                    // false
 
 ## Notes
 
-- This helper is broader than `isPlainObject` because it allows any prototype.
-- Use `isPlainObject` if you need to confirm `Object.prototype` as the prototype.
-- Use `normalizeRecord` if you need to ensure the value becomes a record.
+- This guard is stricter than `isObject` because it rejects arrays.
+- It is stricter than `isRecord` because it also rejects symbol-keyed properties, fully aligning with TypeScript’s `Record<string, unknown>` type.
+- Use `isPlainObject` if you also need the prototype to be exactly `Object.prototype`.
+- Use `normalizeRecord` if you need to coerce values into records.
 - Use `validateRecord` if you need a `Result<T>` instead of a boolean.

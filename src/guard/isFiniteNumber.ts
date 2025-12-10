@@ -9,12 +9,5 @@
  * @returns `true` if the value is a finite primitive number; `false` otherwise.
  */
 export default function isFiniteNumber(value: unknown): value is number {
-    // Must be a number primitive. Rejects bigint, Number objects, and all
-    // non-numeric types.
-    if (typeof value !== 'number') {
-        return false;
-    }
-
-    // Must be finite. Rejects NaN, Infinity, -Infinity.
-    return Number.isFinite(value);
+    return typeof value === 'number' && Number.isFinite(value);
 }

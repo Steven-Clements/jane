@@ -2,6 +2,8 @@
 
 Checks whether a value is an Error object. This helper performs a strict instanceof check and never throws or mutates input. It accepts all native error types as well as custom error subclasses.
 
+**Note**: `isError` uses a strict instanceof Error check. This means it may return `false` for `Error` objects created in a different execution context (for example, another realm such as an iframe).
+
 ## Signature
 
 ```ts

@@ -12,7 +12,7 @@ function isPromise(value: unknown): value is Promise<unknown>
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | true |
+| value | `unknown` | The value to check. Returns `true` only if the value is a native Promise instance or a subclass of Promise. |
 
 ## Returns
 

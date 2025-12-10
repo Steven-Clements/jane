@@ -12,7 +12,7 @@ function isBoolean(value: unknown): value is boolean
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | This helper performs a strict `typeof` check and only returns `true` for primitive boolean values. |
 
 ## Returns
 

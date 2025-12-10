@@ -21,8 +21,9 @@ A boolean:
 - `true` if the value is a Map.
 - `false` otherwise.
 
+## Examples
+
 ```ts
-Examples
 isMap(new Map())          // true
 isMap(new Map([['a', 1]]))// true
 isMap(Object(new Map()))  // true

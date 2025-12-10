@@ -12,7 +12,7 @@ function isArray(value: unknown): value is unknown[]
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | The unknown value to check. Must be validated explicitly; no assumptions or coercion are applied. |
 
 ## Returns
 

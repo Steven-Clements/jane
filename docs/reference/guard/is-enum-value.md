@@ -47,6 +47,22 @@ isEnumValue(Status, 1)        // true
 isEnumValue(Status, 3)        // false
 ```
 
+For numeric enums, TypeScript generates reverse mappings, which means enum *keys* may also be treated as valid values.
+
+Example:
+
+```ts
+enum Status {
+  Active = 1,
+  Disabled = 2,
+}
+
+// ["Active", "Disabled", 1, 2]
+Object.values(Status)
+
+isEnumValue(Status, "Active") // true
+```
+
 ## Notes
 
 - Works with both string and numeric enums.

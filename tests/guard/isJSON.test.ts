@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isJSON from '../../src/guard/isJSON.js';
+import isJSON, { type JSONValue } from '../../src/guard/isJSON.js';
 
 describe('isJSON', () => {
     it('returns true for primitive JSON values', () => {
@@ -17,23 +17,34 @@ describe('isJSON', () => {
     });
 
     it('returns true for arrays of JSON values', () => {
-        expect(isJSON([1, 'a', null])).toBe(true);
-        expect(isJSON([])).toBe(true);
+        const arr: JSONValue[] = [1, 'a', null];
+        expect(isJSON(arr)).toBe(true);
+
+        const empty: JSONValue[] = [];
+        expect(isJSON(empty)).toBe(true);
     });
 
     it('returns false for arrays containing non-JSON values', () => {
-        expect(isJSON([1, undefined])).toBe(false);
-        expect(isJSON([() => {}])).toBe(false);
+        const arr: unknown[] = [1, undefined];
+        expect(isJSON(arr)).toBe(false);
+
+        const arr2: unknown[] = [() => {}];
+        expect(isJSON(arr2)).toBe(false);
     });
 
     it('returns true for plain objects with JSON values', () => {
-        expect(isJSON({ a: 1, b: 'x', c: null })).toBe(true);
+        const obj: Record<string, JSONValue> = { a: 1, b: 'x', c: null };
+        expect(isJSON(obj)).toBe(true);
     });
 
     it('returns false for objects with non-JSON values', () => {
-        expect(isJSON({ a: undefined })).toBe(false);
-        expect(isJSON({ a: () => {} })).toBe(false);
-        expect(isJSON({ a: Symbol() })).toBe(false);
+        const obj1: Record<string, unknown> = { a: undefined };
+        const obj2: Record<string, unknown> = { a: () => {} };
+        const obj3: Record<string, unknown> = { a: Symbol() };
+
+        expect(isJSON(obj1)).toBe(false);
+        expect(isJSON(obj2)).toBe(false);
+        expect(isJSON(obj3)).toBe(false);
     });
 
     it('returns false for objects with non-plain prototypes', () => {
@@ -47,5 +58,15 @@ describe('isJSON', () => {
         expect(isJSON(() => {})).toBe(false);
         expect(isJSON(Symbol())).toBe(false);
         expect(isJSON(1n)).toBe(false);
+    });
+
+    it('rejects circular references at runtime', () => {
+        const arr: unknown[] = [];
+        arr.push(arr); // circular array
+        expect(isJSON(arr)).toBe(false);
+
+        const obj: Record<string, unknown> = {};
+        obj['self'] = obj; // circular object
+        expect(isJSON(obj)).toBe(false);
     });
 });

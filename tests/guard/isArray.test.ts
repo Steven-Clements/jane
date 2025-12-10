@@ -5,6 +5,7 @@ describe('isArray', () => {
     it('returns true for arrays', () => {
         expect(isArray([])).toBe(true);
         expect(isArray([1, 2, 3])).toBe(true);
+        expect(isArray(Object.freeze([1, 2, 3]))).toBe(true);
     });
 
     it('returns false for non-arrays', () => {

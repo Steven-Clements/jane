@@ -1,6 +1,6 @@
 # isBigInteger
 
-Checks whether a value is a *bigint*`. A bigint is a primitive numeric type that represents integers of arbitrary precision.
+Checks whether a value is a *bigint*. A bigint is a primitive numeric type that represents integers of arbitrary precision.
 
 This helper never throws and never mutates input. Use it when you need to confirm bigint types before running normalization or validation.
 

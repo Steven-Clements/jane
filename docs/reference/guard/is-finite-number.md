@@ -38,6 +38,7 @@ isFiniteNumber(1n)       // false
 ## Notes
 
 - This helper is stricter than `isNumber`, which accepts `NaN`, `Infinity`, and `-Infinity`.
+- Wrapper objects (for example, `new Number(5)`) are rejected because they are not number primitives.
 - Use `isInteger` if you need to confirm integer values.
 - Use `normalizeFiniteNumber` if you need to coerce values into finite numbers.
 - Use `validateFiniteNumber` if you need a `Result<T>` instead of a boolean.

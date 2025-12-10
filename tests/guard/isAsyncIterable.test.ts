@@ -38,4 +38,9 @@ describe('isAsyncIterable', () => {
         expect(isAsyncIterable(null)).toBe(false);
         expect(isAsyncIterable(undefined)).toBe(false);
     });
+
+    it('returns false when Symbol.asyncIterator exists but is not callable', () => {
+        expect(isAsyncIterable({ [Symbol.asyncIterator]: 123 })).toBe(false);
+        expect(isAsyncIterable({ [Symbol.asyncIterator]: null })).toBe(false);
+    });
 });

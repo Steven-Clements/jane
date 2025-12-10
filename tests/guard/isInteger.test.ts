@@ -24,4 +24,9 @@ describe('isInteger', () => {
         expect(isInteger(undefined)).toBe(false);
         expect(isInteger({})).toBe(false);
     });
+
+    it('returns false for Number objects and BigInt', () => {
+        expect(isInteger(new Number(42))).toBe(false);
+        expect(isInteger(42n)).toBe(false);
+    });
 });

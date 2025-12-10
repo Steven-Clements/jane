@@ -36,6 +36,7 @@ isIterable(null)             // false
 ## Notes
 
 - This helper checks only for the presence of a callable `[Symbol.iterator]` method.
+- Array-like objects (objects with numeric length but without a `[Symbol.iterator]` method) are *not* considered iterable by this helper.
 - It does not attempt to call the iterator.
 - It does not treat array‑like objects as iterable unless they implement the iterator protocol.
 - Use `validateIterable` if you need a `Result<T>` instead of a boolean.

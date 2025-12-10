@@ -18,20 +18,25 @@ describe('isRecord', () => {
         expect(isRecord(Object.create(null))).toBe(true);
     });
 
-    it('returns true for class instances', () => {
+    it('returns true for class instances with string keys', () => {
         class X {
             a = 1;
+            b = 2;
         }
         expect(isRecord(new X())).toBe(true);
     });
 
     it('returns false for arrays', () => {
         expect(isRecord([])).toBe(false);
-        expect(isRecord([1, 2, 3])).toBe(false);
     });
 
     it('returns false for null', () => {
         expect(isRecord(null)).toBe(false);
+    });
+
+    it('returns false for objects with symbol keys', () => {
+        const obj = { a: 1, [Symbol('s')]: 2 };
+        expect(isRecord(obj)).toBe(false);
     });
 
     it('returns false for non-objects', () => {

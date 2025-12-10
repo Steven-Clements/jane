@@ -8,6 +8,16 @@ describe('isEnumValue', () => {
         C: 'c',
     } as const;
 
+    enum Status {
+        Active = 1,
+        Disabled = 2,
+    }
+
+    it('accepts reverse-mapped enum keys (TS numeric enums)', () => {
+        expect(isEnumValue(Status, 'Active')).toBe(true);
+        expect(isEnumValue(Status, 'Disabled')).toBe(true);
+    });
+
     it('returns true for allowed enum values', () => {
         expect(isEnumValue(Letters, 'a')).toBe(true);
         expect(isEnumValue(Letters, 'b')).toBe(true);
