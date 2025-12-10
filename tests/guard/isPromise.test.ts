@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isPromise from '../../src/guards/isPromise.js';
+import isPromise from '../../src/guard/isPromise.js';
 
 describe('isPromise', () => {
     it('returns true for native Promises', () => {

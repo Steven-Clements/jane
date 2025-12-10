@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isObject from '../../src/guards/isObject.js';
+import isObject from '../../src/guard/isObject.js';
 
 describe('isObject', () => {
     it('returns true for objects', () => {

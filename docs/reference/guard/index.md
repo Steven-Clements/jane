@@ -18,9 +18,11 @@ Each type guard has its own reference page with examples and edge cases.
 - [isNumber](is-number.md): Checks whether a value is a number.
 - [isObject](is-object.md): Checks whether a value is an object.
 - [isPlainObject](is-plain-object.md): Checks whether a value is a plain object.
+- [isPort](is-port.md): Checks whether a value is a valid TCP/UDP port number.
 - [isPromise](is-promise.md): Checks whether a value is a promise.
 - [isRecord](is-record.md): Checks whether a value is a record.
 - [isString](is-string.md): Checks whether a value is a string.
+- [isTimestamp](is-timestamp.md): Checks whether a value is a timestamp.
 
 ## When to use type guards
 

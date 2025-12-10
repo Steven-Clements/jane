@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isString from '../../src/guards/isString.js';
+import isString from '../../src/guard/isString.js';
 
 describe('isString', () => {
     it('returns true for primitive strings', () => {

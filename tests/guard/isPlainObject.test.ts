@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isPlainObject from '../../src/guards/isPlainObject.js';
+import isPlainObject from '../../src/guard/isPlainObject.js';
 
 describe('isPlainObject', () => {
     it('returns true for plain objects', () => {

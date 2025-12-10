@@ -10,21 +10,39 @@ nav:
   - Meet Jane: index.md
   - Reference:
     - Overview: reference/overview.md
+    # - Normalizers:
+    #   - Overview: reference/normalize/index.md
+    #   - normalizeArray: reference/normalize/normalize-array.md
+    #   - normalizeBoolean: reference/normalize/normalize-boolean.md
+    #   - normalizeDate: reference/normalize/normalize-date.md
+    #   - normalizeEnumValue: reference/normalize/normalize-enum-value.md
+    #   - normalizeInteger: reference/normalize/normalize-integer.md
+    #   - normalizeNonEmptyString: reference/normalize/normalize-non-empty-string.md
+    #   - normalizeNumber: reference/normalize/normalize-string.md
+    #   - normalizeObject: reference/normalize/normalize-object.md
+    #   - normalizePlainObject: reference/normalize/normalize-plain-object.md
+    #   - normalizePort: reference/normalize-port.md
+    #   - normalizePromise: reference/normalize-promise.md
+    #   - normalizeRecord: reference/normalize-record.md
+    #   - normalizeString: reference/normalize/normalize-string.md
+    #   - normalizeTimestamp: reference/normalize/normalize-timestamp.md
     - Type guards:
-      - Overview: reference/guards/index.md
-      - isArray: reference/guards/is-array.md
-      - isBoolean: reference/guards/is-boolean.md
-      - isDate: reference/guards/is-date.md
-      - isEnumValue: reference/guards/is-enum-value.md
-      - isFunction: reference/guards/is-function.md
-      - isInteger: reference/guards/is-integer.md
-      - isNonEmptyString: reference/guards/is-non-empty-string.md
-      - isNumber: reference/guards/is-number.md
-      - isObject: reference/guards/is-object.md
-      - isPlainObject: reference/guards/is-plain-object.md
-      - isPromise: reference/guards/is-promise.md
-      - isRecord: reference/guards/is-record.md
-      - isString: reference/guards/is-string.md
+      - Overview: reference/guard/index.md
+      - isArray: reference/guard/is-array.md
+      - isBoolean: reference/guard/is-boolean.md
+      - isDate: reference/guard/is-date.md
+      - isEnumValue: reference/guard/is-enum-value.md
+      - isFunction: reference/guard/is-function.md
+      - isInteger: reference/guard/is-integer.md
+      - isNonEmptyString: reference/guard/is-non-empty-string.md
+      - isNumber: reference/guard/is-number.md
+      - isObject: reference/guard/is-object.md
+      - isPlainObject: reference/guard/is-plain-object.md
+      - isPort: reference/guard/is-port.md
+      - isPromise: reference/guard/is-promise.md
+      - isRecord: reference/guard/is-record.md
+      - isString: reference/guard/is-string.md
+      - isTimestamp: reference/guard/is-timestamp.md
   - Contributing:
     - Overview: contributing/index.md
     - Development workflow: contributing/development-workflow.md

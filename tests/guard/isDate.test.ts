@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isDate from '../../src/guards/isDate.js';
+import isDate from '../../src/guard/isDate.js';
 
 describe('isDate', () => {
     it('returns true for valid Date instances', () => {

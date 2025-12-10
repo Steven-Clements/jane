@@ -18,12 +18,12 @@ Jane takes the opposite approach.
 
 Jane is:
 
-- ✅ **Pure**: No side effects, no hidden mutations.
-- ✅ **Deterministic**: Same input, same output, every time.
-- ✅ **Composable**: Build pipelines with `pipe()`.
-- ✅ **Zero‑dependency**: No runtime weight.
-- ✅ **Framework‑agnostic**: Works in Node, serverless, workers, Express, Fastify, Bun, Deno.
-- ✅ **Focused**: Normalization → validation → result.
+- **Pure**: No side effects, no hidden mutations.
+- **Deterministic**: Same input, same output, every time.
+- **Composable**: Build pipelines with `pipe()`.
+- **Zero‑dependency**: No runtime weight.
+- **Framework‑agnostic**: Works in Node, serverless, workers, Express, Fastify, Bun, Deno.
+- **Focused**: Normalization → validation → result.
 
 If you want a dependable “standard library” for data sanity, Jane is your girl.
 

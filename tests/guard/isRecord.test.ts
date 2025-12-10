@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isRecord from '../../src/guards/isRecord.js';
+import isRecord from '../../src/guard/isRecord.js';
 
 describe('isRecord', () => {
     it('returns true for plain objects', () => {

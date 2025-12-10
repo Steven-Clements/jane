@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isNonEmptyString from '../../src/guards/isNonEmptyString.js';
+import isNonEmptyString from '../../src/guard/isNonEmptyString.js';
 
 describe('isNonEmptyString', () => {
     it('returns true for non-empty primitive strings', () => {

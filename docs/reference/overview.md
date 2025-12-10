@@ -8,13 +8,13 @@ Use this section when you already understand the concepts and workflows, and you
 
 Jane includes several categories of helpers. Each category has its own index page and detailed entries for every function.
 
-## Type Guards
+## Type guards
 
 Helpers that check types and shapes without throwing.
 
 Use these when you need safe branching logic.
 
-[Learn more](guards/index.md)
+[Learn more](guard/index.md)
 
 ## How to read this section
 

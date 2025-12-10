@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isBoolean from '../../src/guards/isBoolean.js';
+import isBoolean from '../../src/guard/isBoolean.js';
 
 describe('isBoolean', () => {
     it('returns true for booleans', () => {

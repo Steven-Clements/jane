@@ -1,3 +1,1 @@
-const world = 'hello';
-
-console.log(world);
+export * from './guard/index.js';

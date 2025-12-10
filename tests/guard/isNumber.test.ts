@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isNumber from '../../src/guards/isNumber.js';
+import isNumber from '../../src/guard/isNumber.js';
 
 describe('isNumber', () => {
     it('returns true for finite numbers', () => {

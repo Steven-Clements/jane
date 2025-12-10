@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isArray from '../../src/guards/isArray.js';
+import isArray from '../../src/guard/isArray.js';
 
 describe('isArray', () => {
     it('returns true for arrays', () => {

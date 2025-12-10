@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isEnumValue from '../../src/guards/isEnumValue.js';
+import isEnumValue from '../../src/guard/isEnumValue.js';
 
 describe('isEnumValue', () => {
     const Letters = {

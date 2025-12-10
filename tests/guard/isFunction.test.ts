@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isFunction from '../../src/guards/isFunction.js';
+import isFunction from '../../src/guard/isFunction.js';
 
 describe('isFunction', () => {
     it('returns true for functions', () => {

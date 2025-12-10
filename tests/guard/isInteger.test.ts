@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import isInteger from '../../src/guards/isInteger.js';
+import isInteger from '../../src/guard/isInteger.js';
 
 describe('isInteger', () => {
     it('returns true for integers', () => {
