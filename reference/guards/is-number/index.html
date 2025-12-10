@@ -16,7 +16,7 @@
         <link rel="prev" href="../is-non-empty-string/">
       
       
-        <link rel="next" href="../is-integer/">
+        <link rel="next" href="../is-string/">
       
       
         
@@ -381,14 +381,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../is-string/" class="md-nav__link">
+      <a href="../is-integer/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    isString
+    isInteger
   
 
     
@@ -567,14 +567,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../is-integer/" class="md-nav__link">
+      <a href="../is-string/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    isInteger
+    isString
   
 
     
@@ -869,7 +869,7 @@
 <h1 id="isnumber">isNumber</h1>
 <p>Checks whether a value is a <em>finite primitive number</em>. This helper never throws and never mutates input. Use it when you need to confirm numeric types before running normalization or validation.</p>
 <h2 id="signature">Signature</h2>
-<pre><code class="language-ts">function isNumber(value: any): value is number
+<pre><code class="language-ts">function isNumber(value: unknown): value is number
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <table>
@@ -883,7 +883,7 @@
 <tbody>
 <tr>
 <td>value</td>
-<td><code>any</code></td>
+<td><code>unknown</code></td>
 <td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
 </tr>
 </tbody>

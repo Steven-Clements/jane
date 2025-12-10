@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guards/is-integer/">
       
       
-        <link rel="prev" href="../is-number/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../../contributing/development-workflow/">
+        <link rel="next" href="../is-non-empty-string/">
       
       
         
@@ -378,90 +378,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../is-string/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isString
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../is-non-empty-string/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isNonEmptyString
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../is-number/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isNumber
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -558,6 +474,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -572,6 +499,90 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-non-empty-string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isNonEmptyString
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isNumber
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isString
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -817,6 +828,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -847,7 +869,7 @@
 <h1 id="isinteger">isInteger</h1>
 <p>Checks whether a value is a <em>finite integer</em>. This helper never throws and never mutates input. Use it when you need to confirm integer types before running normalization or validation.</p>
 <h2 id="signature">Signature</h2>
-<pre><code class="language-ts">function isInteger(value: any): value is number
+<pre><code class="language-ts">function isInteger(value: unknown): value is number
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <table>
@@ -861,7 +883,7 @@
 <tbody>
 <tr>
 <td>value</td>
-<td><code>any</code></td>
+<td><code>unknown</code></td>
 <td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
 </tr>
 </tbody>
@@ -872,8 +894,8 @@
 <li><code>true</code> if the value is a finite integer.</li>
 <li><code>false</code> otherwise.</li>
 </ul>
-<pre><code class="language-ts">Examples
-isInteger(42)          // true
+<h2 id="examples">Examples</h2>
+<pre><code class="language-ts">isInteger(42)          // true
 isInteger(0)           // true
 isInteger(-10)         // true
 isInteger(3.14)        // false

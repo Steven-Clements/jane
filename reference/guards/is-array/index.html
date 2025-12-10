@@ -10,28 +10,24 @@
       
       
       
-        <link rel="canonical" href="https://steven-clements.github.io/jane/contributing/development-workflow/">
+        <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guards/is-array/">
       
       
-        <link rel="prev" href="../../reference/guards/is-string/">
-      
-      
-        <link rel="next" href="../restricted-repo-files/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Development workflow - Jane docs</title>
+        <title>isArray - Jane docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
       
 
@@ -50,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#follow-the-development-workflow" class="md-skip">
+        <a href="#isarray" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Jane docs" class="md-header__button md-logo" aria-label="Jane docs" data-md-component="logo">
+    <a href="../../.." title="Jane docs" class="md-header__button md-logo" aria-label="Jane docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Development workflow
+              isArray
             
           </span>
         </div>
@@ -182,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jane docs" class="md-nav__button md-logo" aria-label="Jane docs" data-md-component="logo">
+    <a href="../../.." title="Jane docs" class="md-nav__button md-logo" aria-label="Jane docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -200,7 +196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -274,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
@@ -349,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/guards/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -377,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/guards/is-integer/" class="md-nav__link">
+      <a href="../is-integer/" class="md-nav__link">
         
   
   
@@ -405,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/guards/is-non-empty-string/" class="md-nav__link">
+      <a href="../is-non-empty-string/" class="md-nav__link">
         
   
   
@@ -433,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/guards/is-number/" class="md-nav__link">
+      <a href="../is-number/" class="md-nav__link">
         
   
   
@@ -461,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/guards/is-string/" class="md-nav__link">
+      <a href="../is-string/" class="md-nav__link">
         
   
   
@@ -501,20 +497,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -535,7 +529,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -553,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href="../../../contributing/index.md" class="md-nav__link">
         
   
   
@@ -578,19 +572,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../contributing/development-workflow/" class="md-nav__link">
         
   
   
@@ -606,7 +591,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -619,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../restricted-repo-files/" class="md-nav__link">
+      <a href="../../../contributing/restricted-repo-files/" class="md-nav__link">
         
   
   
@@ -654,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CHANGELOG.md" class="md-nav__link">
+      <a href="../../../../CHANGELOG.md" class="md-nav__link">
         
   
   
@@ -694,6 +678,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -709,50 +756,51 @@
 
 
 
-<h1 id="follow-the-development-workflow">Follow the development workflow</h1>
-<p>Jane follows a clarity‑first, contract‑driven workflow. Every change begins with an explicit description of the intended behavior before any implementation work is done.</p>
-<p>The workflow is:</p>
-<ol>
-<li>
-<p><strong>Write a reference topic</strong></p>
-<p>Describe the module’s purpose, inputs, outputs, constraints, and edge cases in <code>docs/reference/</code>.</p>
-<p>The reference topic is the human‑readable contract.</p>
-</li>
-<li>
-<p><strong>Write the tests</strong></p>
-<p>Translate your reference topic into executable expectations using Vitest.</p>
-<p>Tests should cover:</p>
+<h1 id="isarray">isArray</h1>
+<p>Checks whether a value is an array. This helper never throws and never mutates input. Use it when you need to confirm that a value is an array before running normalization or validation.</p>
+<h2 id="signature">Signature</h2>
+<pre><code class="language-ts">function isArray(value: unknown): value is unknown[]
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>unknown</code></td>
+<td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="returns">Returns</h2>
+<p>A boolean:</p>
 <ul>
-<li>Expected behavior.</li>
-<li>Invalid inputs.</li>
-<li>Edge cases.</li>
-<li>Type‑level expectations (if applicable).</li>
+<li><code>true</code> if the value is an array.</li>
+<li><code>false</code> otherwise.</li>
 </ul>
-<p>Tests are the executable contract.</p>
-</li>
-<li>
-<p><strong>Write the implementation</strong>  </p>
-<p>Implement the module so that it satisfies the spec and passes all tests.</p>
-<p>Keep modules small, explicit, and free of side effects.</p>
-</li>
-<li>
-<p><strong>Update documentation</strong>  </p>
-<p>If the change affects public behavior, update the relevant docs in <code>docs/</code>.</p>
-</li>
-<li>
-<p><strong>Commit using semantic messages</strong>  </p>
-<p>Use Conventional Commits to ensure automated releases and changelog updates:</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-ts">isArray([])              // true
+isArray([1, 2, 3])       // true
+isArray([&quot;a&quot;, &quot;b&quot;])      // true
+
+isArray({})              // false
+isArray(null)            // false
+isArray(&quot;hello&quot;)         // false
+isArray(123)             // false
+</code></pre>
+<h2 id="notes">Notes</h2>
 <ul>
-<li><code>feat:</code> for new features</li>
-<li><code>fix:</code> for bug fixes</li>
-<li><code>docs:</code> for documentation changes</li>
-<li><code>refactor:</code> for internal changes</li>
-<li><code>test:</code> for test‑only changes</li>
-<li><code>chore:</code> for non‑code tasks</li>
+<li>This helper uses <code>Array.isArray</code> internally.</li>
+<li>Use <code>normalizeArray</code> if you need to ensure a value becomes an array.</li>
+<li>Use <code>normalizeStringArray</code> if you need an array of strings.</li>
+<li>Use <code>validateArray</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>
-</li>
-</ol>
-<p>This workflow ensures that behavior is defined before it is implemented, tests reflect the intended contract, and the codebase remains predictable and maintainable.</p>
 
 
 
@@ -802,10 +850,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

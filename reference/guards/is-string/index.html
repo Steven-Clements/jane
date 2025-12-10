@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guards/is-string/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../is-number/">
       
       
-        <link rel="next" href="../is-non-empty-string/">
+        <link rel="next" href="../../../contributing/development-workflow/">
       
       
         
@@ -378,6 +378,90 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-integer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isInteger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-non-empty-string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isNonEmptyString
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isNumber
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -499,90 +583,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../is-non-empty-string/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isNonEmptyString
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../is-number/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isNumber
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../is-integer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isInteger
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -869,7 +869,7 @@
 <h1 id="isstring">isString</h1>
 <p>Checks whether a value is a <em>primitive string</em>. This helper never throws and never mutates input. It performs a strict <code>typeof</code> check and does not coerce values.</p>
 <h2 id="signature">Signature</h2>
-<pre><code class="language-ts">function isString(value: any): value is string
+<pre><code class="language-ts">function isString(value: unknown): value is string
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <table>
@@ -883,7 +883,7 @@
 <tbody>
 <tr>
 <td>value</td>
-<td><code>any</code></td>
+<td><code>unknown</code></td>
 <td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
 </tr>
 </tbody>

@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guards/is-non-empty-string/">
       
       
-        <link rel="prev" href="../is-string/">
+        <link rel="prev" href="../is-integer/">
       
       
         <link rel="next" href="../is-number/">
@@ -381,14 +381,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../is-string/" class="md-nav__link">
+      <a href="../is-integer/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    isString
+    isInteger
   
 
     
@@ -567,14 +567,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../is-integer/" class="md-nav__link">
+      <a href="../is-string/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    isInteger
+    isString
   
 
     
@@ -869,7 +869,7 @@
 <h1 id="isnonemptystring">isNonEmptyString</h1>
 <p>Checks whether a value is a <em>primitive, non‑empty string</em>. This helper never throws and never mutates input. It performs a strict <code>typeof</code> check and does not trim or normalize the value.</p>
 <h2 id="signature">Signature</h2>
-<pre><code class="language-ts">function isNonEmptyString(value: any): value is string
+<pre><code class="language-ts">function isNonEmptyString(value: unknown): value is string
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <table>
@@ -883,7 +883,7 @@
 <tbody>
 <tr>
 <td>value</td>
-<td><code>any</code></td>
+<td><code>unknown</code></td>
 <td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
 </tr>
 </tbody>
