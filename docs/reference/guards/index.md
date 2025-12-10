@@ -8,15 +8,14 @@ Type guards are pure, predictable, and consistent. They make your workflows easi
 
 Each type guard has its own reference page with examples and edge cases.
 
-### Strings
-
-- [isString](is-string.md): Checks whether a value is a string.
-- [isNonEmptyString](is-non-empty-string.md): Checks for a non‑empty string.
-
-### Numbers
-
-- [isNumber](is-number.md): Checks whether a value is a number.
+- [isArray](is-array.md): Checks whether a value is an array.
+- [isBoolean](is-boolean.md): Checks whether a value is a boolean.
+- [isDate](is-date.md): Checks whether a value is a date.
+- [isFunction](is-function.md): Checks whether a value is a function.
 - [isInteger](is-integer.md): Checks whether a value is an integer.
+- [isNonEmptyString](is-non-empty-string.md): Checks for a non‑empty string.
+- [isNumber](is-number.md): Checks whether a value is a number.
+- [isString](is-string.md): Checks whether a value is a string.
 
 ## When to use type guards
 

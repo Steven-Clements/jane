@@ -5,14 +5,14 @@ Checks whether a value is a *primitive, non‑empty string*. This helper never t
 ## Signature
 
 ```ts
-function isNonEmptyString(value: any): value is string
+function isNonEmptyString(value: unknown): value is string
 ```
 
 ## Parameters
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `any` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
 
 ## Returns
 

@@ -12,10 +12,10 @@ nav:
     - Overview: reference/overview.md
     - Type guards:
       - Overview: reference/guards/index.md
-      - isString: reference/guards/is-string.md
+      - isInteger: reference/guards/is-integer.md
       - isNonEmptyString: reference/guards/is-non-empty-string.md
       - isNumber: reference/guards/is-number.md
-      - isInteger: reference/guards/is-integer.md
+      - isString: reference/guards/is-string.md
   - Contributing:
     - Overview: contributing/index.md
     - Development workflow: contributing/development-workflow.md

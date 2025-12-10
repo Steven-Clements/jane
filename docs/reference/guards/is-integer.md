@@ -5,14 +5,14 @@ Checks whether a value is a *finite integer*. This helper never throws and never
 ## Signature
 
 ```ts
-function isInteger(value: any): value is number
+function isInteger(value: unknown): value is number
 ```
 
 ## Parameters
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `any` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
 
 ## Returns
 
@@ -21,8 +21,9 @@ A boolean:
 - `true` if the value is a finite integer.
 - `false` otherwise.
 
+## Examples
+
 ```ts
-Examples
 isInteger(42)          // true
 isInteger(0)           // true
 isInteger(-10)         // true

@@ -5,14 +5,14 @@ Checks whether a value is a *primitive string*. This helper never throws and nev
 ## Signature
 
 ```ts
-function isString(value: any): value is string
+function isString(value: unknown): value is string
 ```
 
 ## Parameters
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `any` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
+| value | `unknown` | The value to check. This helper performs a strict `typeof` check and only returns `true` for *finite primitive integers*. |
 
 ## Returns
 
