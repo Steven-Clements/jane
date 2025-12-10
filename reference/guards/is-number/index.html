@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://steven-clements.github.io/jane/">
+        <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guards/is-number/">
       
       
+        <link rel="prev" href="../is-non-empty-string/">
       
-        <link rel="next" href="reference/overview/">
+      
+        <link rel="next" href="../is-integer/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Jane docs</title>
+        <title>isNumber - Jane docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
       
 
@@ -48,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jane" class="md-skip">
+        <a href="#isnumber" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Jane docs" class="md-header__button md-logo" aria-label="Jane docs" data-md-component="logo">
+    <a href="../../.." title="Jane docs" class="md-header__button md-logo" aria-label="Jane docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Meet Jane
+              isNumber
             
           </span>
         </div>
@@ -180,7 +182,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Jane docs" class="md-nav__button md-logo" aria-label="Jane docs" data-md-component="logo">
+    <a href="../../.." title="Jane docs" class="md-nav__button md-logo" aria-label="Jane docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -195,37 +197,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Meet Jane
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -241,92 +216,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-jane" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why Jane?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#who-is-jane-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Who is Jane for?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        License
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Author
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -335,18 +224,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -367,7 +258,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -385,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
@@ -410,18 +301,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -442,7 +335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -460,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/guards/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -488,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/guards/is-string/" class="md-nav__link">
+      <a href="../is-string/" class="md-nav__link">
         
   
   
@@ -516,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/guards/is-non-empty-string/" class="md-nav__link">
+      <a href="../is-non-empty-string/" class="md-nav__link">
         
   
   
@@ -541,10 +434,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="reference/guards/is-number/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isNumber
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -560,6 +480,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -572,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/guards/is-integer/" class="md-nav__link">
+      <a href="../is-integer/" class="md-nav__link">
         
   
   
@@ -662,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/index.md" class="md-nav__link">
+      <a href="../../../contributing/index.md" class="md-nav__link">
         
   
   
@@ -690,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/development-workflow/" class="md-nav__link">
+      <a href="../../../contributing/development-workflow/" class="md-nav__link">
         
   
   
@@ -718,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/restricted-repo-files/" class="md-nav__link">
+      <a href="../../../contributing/restricted-repo-files/" class="md-nav__link">
         
   
   
@@ -753,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CHANGELOG.md" class="md-nav__link">
+      <a href="../../../../CHANGELOG.md" class="md-nav__link">
         
   
   
@@ -800,10 +795,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-jane" class="md-nav__link">
+  <a href="#signature" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Jane?
+        Signature
       
     </span>
   </a>
@@ -811,10 +806,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#who-is-jane-for" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Who is Jane for?
+        Parameters
       
     </span>
   </a>
@@ -822,10 +817,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#returns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Returns
       
     </span>
   </a>
@@ -833,10 +828,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Documentation
+        Examples
       
     </span>
   </a>
@@ -844,21 +839,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        License
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Author
+        Notes
       
     </span>
   </a>
@@ -882,55 +866,51 @@
 
 
 
-<h1 id="jane">Jane</h1>
-<p>Zero‑side‑effect normalization and validation helpers for JavaScript.</p>
-<p>Jane is a small, clarity‑first helper library for <strong>normalizing</strong>, <strong>validating</strong>, and <strong>safely parsing</strong> unknown input in JavaScript and TypeScript.</p>
-<p>It’s built for developers who want predictable behavior, composable pipelines, and zero surprises — without schema systems, decorators, or framework lock‑in.</p>
-<p>Jane is intentionally small. Intentionally explicit. Intentionally boring in all the right ways.</p>
-<hr />
-<h2 id="why-jane">Why Jane?</h2>
-<p>Most validation libraries try to be everything: schema builders, type generators, transformers, parsers, refiners, and runtime type systems.</p>
-<p>Jane takes the opposite approach.</p>
-<p>Jane is:</p>
-<ul>
-<li>✅ <strong>Pure</strong>: No side effects, no hidden mutations.</li>
-<li>✅ <strong>Deterministic</strong>: Same input, same output, every time.</li>
-<li>✅ <strong>Composable</strong>: Build pipelines with <code>pipe()</code>.</li>
-<li>✅ <strong>Zero‑dependency</strong>: No runtime weight.</li>
-<li>✅ <strong>Framework‑agnostic</strong>: Works in Node, serverless, workers, Express, Fastify, Bun, Deno.</li>
-<li>✅ <strong>Focused</strong>: Normalization → validation → result.</li>
-</ul>
-<p>If you want a dependable “standard library” for data sanity, Jane is your girl.</p>
-<hr />
-<h2 id="who-is-jane-for">Who is Jane for?</h2>
-<p>Jane is designed for developers who:</p>
-<ul>
-<li>Prefer <strong>explicit, predictable behavior</strong> over magic.</li>
-<li>Want <strong>pure functions</strong> instead of schema DSLs.</li>
-<li>Need <strong>safe parsing</strong> for config, requests, queries, and internal boundaries.</li>
-<li>Value <strong>clarity and maintainability</strong> in long‑lived codebases.</li>
-<li>Dislike validators that throw.</li>
-<li>Want <strong>small, composable building blocks</strong> instead of monolithic schemas.</li>
-</ul>
-<p>If you’ve ever written your own tiny normalizers and validators because existing libraries felt too heavy — Jane was built for you.</p>
-<hr />
-<h2 id="installation">Installation</h2>
-<pre><code class="language-bash">npm install @steven-clements/jane
+<h1 id="isnumber">isNumber</h1>
+<p>Checks whether a value is a <em>finite primitive number</em>. This helper never throws and never mutates input. Use it when you need to confirm numeric types before running normalization or validation.</p>
+<h2 id="signature">Signature</h2>
+<pre><code class="language-ts">function isNumber(value: any): value is number
 </code></pre>
-<hr />
-<h2 id="documentation">Documentation</h2>
-<p>Documentation is available at:</p>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>any</code></td>
+<td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="returns">Returns</h2>
+<p>A boolean:</p>
 <ul>
-<li><a href="./">Project overview</a></li>
-<li><a href="reference/overview/">Reference</a></li>
-<li><a href="contributing/overview/">Contributing</a></li>
+<li><code>true</code> if the value is a finite primitive number</li>
+<li><code>false</code> otherwise</li>
 </ul>
-<h2 id="license">License</h2>
-<p>Jane is licensed under the Apache License, Version 2.0.</p>
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-<h2 id="author">Author</h2>
-<p>Steven "Chris" Clements</p>
-<p>Designed for clarity, composability, and long‑term maintainability.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-ts">isNumber(42)          // true
+isNumber(0)           // true
+isNumber(-3.14)       // true
+isNumber(NaN)         // false
+isNumber(Infinity)    // false
+isNumber(&quot;123&quot;)       // false
+isNumber(null)        // false
+isNumber(undefined)   // false
+</code></pre>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>This helper rejects <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code> because they are not meaningful numeric values.</li>
+<li>Use <code>isInteger</code> if you need to confirm integer values.</li>
+<li>Use <code>normalizeNumber</code> if you need to convert values into numbers.</li>
+<li>Use <code>validateNumber</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
+</ul>
 
 
 
@@ -980,10 +960,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

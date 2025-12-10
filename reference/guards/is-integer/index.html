@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://steven-clements.github.io/jane/contributing/restricted-files-and-directories/">
+        <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guards/is-integer/">
       
       
-        <link rel="prev" href="../development-workflow/">
+        <link rel="prev" href="../is-number/">
       
       
-        <link rel="next" href="../../reference/overview/">
+        <link rel="next" href="../../../contributing/development-workflow/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Restricted files and directories - Jane docs</title>
+        <title>isInteger - Jane docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#restricted-files-and-directories" class="md-skip">
+        <a href="#isinteger" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Jane docs" class="md-header__button md-logo" aria-label="Jane docs" data-md-component="logo">
+    <a href="../../.." title="Jane docs" class="md-header__button md-logo" aria-label="Jane docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Restricted files and directories
+              isInteger
             
           </span>
         </div>
@@ -182,7 +182,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jane docs" class="md-nav__button md-logo" aria-label="Jane docs" data-md-component="logo">
+    <a href="../../.." title="Jane docs" class="md-nav__button md-logo" aria-label="Jane docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -200,7 +200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -247,7 +247,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Reference
   
 
     
@@ -263,7 +263,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Contributing
+    Reference
   
 
           </label>
@@ -276,14 +276,175 @@
   
   
     <li class="md-nav__item">
-      <a href="../development-workflow/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Follow the development workflow
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type guards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Type guards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isString
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-non-empty-string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isNonEmptyString
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isNumber
   
 
     
@@ -320,7 +481,7 @@
   <span class="md-ellipsis">
     
   
-    Restricted files and directories
+    isInteger
   
 
     
@@ -338,7 +499,7 @@
   <span class="md-ellipsis">
     
   
-    Restricted files and directories
+    isInteger
   
 
     
@@ -364,10 +525,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#do-not-modify-these-files" class="md-nav__link">
+  <a href="#signature" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Do not modify these files
+        Signature
       
     </span>
   </a>
@@ -375,10 +536,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#allowed-areas-for-contributions" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Allowed areas for contributions
+        Parameters
       
     </span>
   </a>
@@ -386,10 +547,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exceptions" class="md-nav__link">
+  <a href="#returns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exceptions
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
       
     </span>
   </a>
@@ -399,6 +571,14 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -437,7 +617,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Contributing
   
 
     
@@ -453,7 +633,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reference
+    Contributing
   
 
           </label>
@@ -466,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/overview/" class="md-nav__link">
+      <a href="../../../contributing/index.md" class="md-nav__link">
         
   
   
@@ -494,14 +674,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/guards/is-string/" class="md-nav__link">
+      <a href="../../../contributing/development-workflow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Type guards
+    Development workflow
   
 
     
@@ -522,42 +702,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/guards/is-string/" class="md-nav__link">
+      <a href="../../../contributing/restricted-repo-files/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Type guards
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/guards/is-non-empty-string/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isNonEmptyString
+    Restricted repo files
   
 
     
@@ -585,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CHANGELOG.md" class="md-nav__link">
+      <a href="../../../../CHANGELOG.md" class="md-nav__link">
         
   
   
@@ -632,10 +784,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#do-not-modify-these-files" class="md-nav__link">
+  <a href="#signature" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Do not modify these files
+        Signature
       
     </span>
   </a>
@@ -643,10 +795,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#allowed-areas-for-contributions" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Allowed areas for contributions
+        Parameters
       
     </span>
   </a>
@@ -654,10 +806,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exceptions" class="md-nav__link">
+  <a href="#returns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exceptions
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
       
     </span>
   </a>
@@ -681,65 +844,49 @@
 
 
 
-<h1 id="restricted-files-and-directories">Restricted files and directories</h1>
-<p>This project uses automated tooling for releases, formatting, documentation, and configuration.  </p>
-<p>To keep the repository stable and predictable, certain files must <strong>not</strong> be edited in pull requests unless explicitly requested by a maintainer.</p>
-<h2 id="do-not-modify-these-files">Do not modify these files</h2>
+<h1 id="isinteger">isInteger</h1>
+<p>Checks whether a value is a <em>finite integer</em>. This helper never throws and never mutates input. Use it when you need to confirm integer types before running normalization or validation.</p>
+<h2 id="signature">Signature</h2>
+<pre><code class="language-ts">function isInteger(value: any): value is number
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>any</code></td>
+<td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="returns">Returns</h2>
+<p>A boolean:</p>
 <ul>
-<li><strong>CHANGELOG.md</strong>: Automatically generated by the release pipeline. Any manual edits will be overwritten.</li>
-<li><strong>CODEOWNERS</strong>: Defines review and approval rules. Changes require maintainer approval and are not accepted through general PRs.</li>
-<li>
-<p><strong>LICENSE</strong>: Legal document. Only maintainers may update it.</p>
-</li>
-<li>
-<p><strong>Release and automation configs</strong>:</p>
-</li>
+<li><code>true</code> if the value is a finite integer.</li>
+<li><code>false</code> otherwise.</li>
 </ul>
-<p>These files are part of the automated release and CI/CD pipeline and must remain stable:</p>
+<pre><code class="language-ts">Examples
+isInteger(42)          // true
+isInteger(0)           // true
+isInteger(-10)         // true
+isInteger(3.14)        // false
+isInteger(NaN)         // false
+isInteger(Infinity)    // false
+isInteger(&quot;123&quot;)       // false
+isInteger(null)        // false
+</code></pre>
+<h2 id="notes">Notes</h2>
 <ul>
-<li><code>.releaserc</code> or <code>release.config.*</code></li>
-<li><code>.github/workflows/*</code></li>
-<li><code>package.json</code> (release‑related fields)</li>
-<li>
-<p><code>semantic-release</code> configuration</p>
-</li>
-<li>
-<p><strong>Formatting and linting configs</strong>:</p>
-</li>
-</ul>
-<p>These define the project’s formatting and linting rules:</p>
-<ul>
-<li><code>prettier.config.*</code></li>
-<li><code>eslint.config.*</code></li>
-<li><code>.editorconfig</code></li>
-<li><code>tsconfig.json</code></li>
-<li>
-<p><code>vitest.config.*</code></p>
-</li>
-<li>
-<p><strong>Root‑level configuration files</strong>:</p>
-</li>
-</ul>
-<p>Unless a maintainer requests a change, do not modify files at the repository root (except <code>README.md</code> and <code>mkdocs.yml</code>).</p>
-<h2 id="allowed-areas-for-contributions">Allowed areas for contributions</h2>
-<p>Most contributions should be limited to:</p>
-<ul>
-<li><code>mkdocs.yml</code> — documentation site navigation</li>
-<li><code>README.md</code> — General project information (raise the bar!).</li>
-<li><code>src/</code> — implementation  </li>
-<li><code>tests/</code> — test suites  </li>
-<li><code>docs/</code> — documentation  </li>
-<li><code>coverage/</code> — generated coverage artifacts (rarely edited manually)</li>
-</ul>
-<h2 id="exceptions">Exceptions</h2>
-<p>If a change to a restricted file is required to fix a bug, improve documentation, or resolve a configuration issue, please open an issue first.</p>
-<p>A maintainer will confirm whether the change is appropriate before a PR is opened.</p>
-<p>This policy ensures:</p>
-<ul>
-<li>Consistent automation.</li>
-<li>Predictable releases.</li>
-<li>Stable contributor experience.</li>
-<li>Clear separation between code and infrastructure.</li>
+<li>This helper uses <code>Number.isInteger</code> internally, which rejects <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code>.</li>
+<li>Use <code>normalizeInteger</code> if you need to convert values into integers.</li>
+<li>Use <code>validateInteger</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>
 
 
@@ -790,10 +937,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
