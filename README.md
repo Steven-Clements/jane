@@ -2,12 +2,6 @@
 
 Zero‑side‑effect normalization and validation helpers for JavaScript.
 
-[![npm version](https://img.shields.io/npm/v/@clementine-solutions/jane.svg)](https://www.npmjs.com/package/@clementine-solutions/jane) [![npm downloads](https://img.shields.io/npm/dm/@clementine-solutions/jane.svg)](https://www.npmjs.com/package/@clementine-solutions/jane) ![license](https://img.shields.io/github/license/Clementine-Solutions/jane)
-
-![build](https://github.com/Clementine-Solutions/jane/actions/workflows/ci.yml/badge.svg) ![typescript](https://img.shields.io/badge/types-TypeScript-blue) [![bundle size](https://img.shields.io/bundlephobia/minzip/@clementine-solutions/jane)](https://bundlephobia.com/package/@clementine-solutions/jane) ![semver](https://img.shields.io/badge/semver-2.0.0-blue)
-
-![clarity-first](https://img.shields.io/badge/style-clarity--first-4B9CD3) ![prs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen) ![codeowners](https://img.shields.io/badge/review-CODEOWNERS-important)
-
 Jane is a small, clarity‑first helper library for **normalizing**, **validating**, and **safely parsing** unknown input in JavaScript and TypeScript.
 
 It’s built for developers who want predictable behavior, composable pipelines, and zero surprises — without schema systems, decorators, or framework lock‑in.

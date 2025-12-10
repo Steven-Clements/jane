@@ -13,4 +13,5 @@ nav:
       - Overview: reference/overview.md
       - Type guards: reference/guards/is-string.md
       - isString: reference/guards/is-string.md
+      - isNonEmptyString
   - Changelog: ../CHANGELOG.md

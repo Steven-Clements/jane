@@ -4,14 +4,6 @@ Type guards help you safely branch logic and validate shapes without throwing ex
 
 Type guards are pure, predictable, and consistent. They make your workflows easier to read and easier to reason about.
 
-## Available type guards
-
-Each type guard has its own reference page with examples and edge cases.
-
-### Strings
-
-- `isString`: Checks whether a value is a string.
-
 ## When to use type guards
 
 Use type guards when:
@@ -23,3 +15,12 @@ Use type guards when:
 - You want to write defensive code without clutter.
 
 Type guards are the simplest building blocks in Jane. They help you write clear, explicit workflows.
+
+## Available type guards
+
+Each type guard has its own reference page with examples and edge cases.
+
+### Strings
+
+- [isString](./is-string.md): Checks whether a value is a string.
+- [isNonEmptyString](./isNonEmptyString.md): Checks for a non‑empty string.
