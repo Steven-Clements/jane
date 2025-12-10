@@ -1,0 +1,16 @@
+site_name: Jane docs
+site_description: Process guides, tutorials, and reference information for using Jane in modern projects.
+site_url: 'https://steven-clements.github.io/jane'
+
+theme: material
+
+nav:
+  - Meet Jane: index.md
+  - Contributing:
+      - Follow the development workflow: contributing/development-workflow.md
+      - Restricted files and directories: contributing/restricted-files-and-directories.md
+  - Reference:
+      - Overview: reference/overview.md
+      - Type guards: reference/guards/is-string.md
+      - isString: reference/guards/is-string.md
+  - Changelog: ../CHANGELOG.md

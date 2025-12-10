@@ -1,0 +1,60 @@
+{
+    "name": "jane",
+    "types": "dist/index.d.ts",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">=22.14.0"
+    },
+    "description": "Zero-side-effect normalization and validation helpers for JavaScript.",
+    "homepage": "https://github.com/Steven-Clements/jane#readme",
+    "bugs": {
+        "url": "https://github.com/Steven-Clements/jane/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Steven-Clements/jane.git"
+    },
+    "license": "Apache-2.0",
+    "author": "Steven \"Chris\" Clements <clements.steven07@outlook.com>",
+    "type": "module",
+    "main": "index.js",
+    "files": [
+        "dist",
+        "src",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "prepare": "husky",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "lint-staged": "lint-staged",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest",
+        "test:coverage": "vitest --coverage",
+        "build": "tsc -p tsconfig.json",
+        "release": "semantic-release"
+    },
+    "lint-staged": {
+        "*.{ts,tsx,js,json,md,yml,yaml}": "prettier --write"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^20.2.0",
+        "@commitlint/config-conventional": "^20.2.0",
+        "@eslint/js": "^9.39.1",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^12.0.2",
+        "@semantic-release/npm": "^13.1.2",
+        "@types/node": "^24.10.2",
+        "@vitest/coverage-v8": "^4.0.15",
+        "eslint": "^9.39.1",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.7",
+        "prettier": "^3.7.4",
+        "semantic-release": "^25.0.2",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.49.0",
+        "vitest": "^4.0.15"
+    }
+}
