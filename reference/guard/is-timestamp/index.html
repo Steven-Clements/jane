@@ -866,6 +866,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1125,6 +1136,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1153,7 +1175,7 @@
 
 
 <h1 id="istimestamp">isTimestamp</h1>
-<p>Checks whether a value is a <em>valid numeric timestamp</em>. A timestamp is defined as a finite number representing milliseconds since the Unix epoch. This helper never throws and never mutates input. It performs a strict type check and does not coerce strings or other values into numbers.</p>
+<p>Checks whether a value is a Unix timestamp in milliseconds. A timestamp is defined as a finite integer number representing milliseconds since the Unix epoch (1970‑01‑01T00:00:00Z). This helper never throws and never mutates input. Use it when you need to confirm timestamp values before running normalization or validation.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function isTimestamp(value: unknown): value is number
 </code></pre>
@@ -1170,30 +1192,29 @@
 <tr>
 <td>value</td>
 <td><code>unknown</code></td>
-<td>The value to check. Must be a finite number representing a valid millisecond timestamp to return <code>true</code>.</td>
+<td>true</td>
 </tr>
 </tbody>
 </table>
 <h2 id="returns">Returns</h2>
 <p>A boolean:</p>
 <ul>
-<li><code>true</code> if the value is a finite number and not <code>NaN</code>.</li>
+<li><code>true</code> if the value is a finite integer timestamp.</li>
 <li><code>false</code> otherwise.</li>
 </ul>
-<p>Examples</p>
-<pre><code class="language-ts">isTimestamp(Date.now())        // true
-isTimestamp(1700000000000)     // true
+<h2 id="examples">Examples</h2>
+<pre><code class="language-ts">isTimestamp(1700000000000)   // true
+isTimestamp(0)               // true
+isTimestamp(-1000)           // true (pre‑epoch)
 
-isTimestamp(&quot;1700000000000&quot;)   // false
-isTimestamp(NaN)               // false
-isTimestamp(Infinity)          // false
-isTimestamp(null)              // false
-isTimestamp({})                // false
+isTimestamp(3.14)            // false
+isTimestamp(&quot;1700000000000&quot;) // false
+isTimestamp(NaN)             // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This helper does not validate ranges (e.g., future or past limits).</li>
-<li>This helper does not accept strings, even numeric ones.</li>
+<li>This helper does not accept fractional numbers or strings.</li>
+<li>Negative timestamps are valid and represent dates before the Unix epoch.</li>
 <li>Use <code>normalizeTimestamp</code> if you need to coerce values into timestamps.</li>
 <li>Use <code>validateTimestamp</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>

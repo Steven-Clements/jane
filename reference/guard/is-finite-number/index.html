@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guard/is-function/">
+        <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guard/is-finite-number/">
       
       
-        <link rel="prev" href="../is-enum-value/">
-      
-      
-        <link rel="next" href="../is-integer/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>isFunction - Jane docs</title>
+        <title>isFiniteNumber - Jane docs</title>
       
     
     
@@ -68,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#isfunction" class="md-skip">
+        <a href="#isfinitenumber" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              isFunction
+              isFiniteNumber
             
           </span>
         </div>
@@ -224,20 +220,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -258,7 +252,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -301,20 +295,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -335,7 +327,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -490,37 +482,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isFunction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../is-function/" class="md-nav__link">
         
   
   
@@ -536,70 +501,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Signature
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Returns
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1103,6 +1004,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#returns" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1152,11 +1064,12 @@
 
 
 
-<h1 id="isfunction">isFunction</h1>
-<p>Checks whether a value is a <em>function</em>. This helper never throws and never mutates input. Use it when you need to confirm callable values before running logic that expects a function.</p>
+<h1 id="isfinitenumber">isFiniteNumber</h1>
+<p>Checks whether a value is a finite primitive number. A finite number is a number primitive that is not NaN, Infinity, or -Infinity. This helper never throws and never mutates input. Use it when you need to confirm that a value is suitable for arithmetic, normalization, or any domain where numeric finiteness is required.</p>
 <h2 id="signature">Signature</h2>
-<pre><code class="language-ts">function isFunction(value: unknown): value is Function
+<pre><code class="language-ts">function isFiniteNumber(value: unknown): value is number
 </code></pre>
+<h2 id="parameters">Parameters</h2>
 <table>
 <thead>
 <tr>
@@ -1168,58 +1081,35 @@
 <tbody>
 <tr>
 <td>value</td>
-<td><code>unknown</code></td>
-<td>The value to check. Must be a function (per JavaScript's <code>typeof</code> semantics), including class constructors, async functions, generator functions, and bound functions.</td>
+<td>unknown</td>
+<td>The value to check. Must be a finite primitive number to return <code>true</code>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="returns">Returns</h2>
 <p>A boolean:</p>
 <ul>
-<li><code>true</code> if the value is a function (including classes, async, generator, and built-in functions).</li>
+<li><code>true</code> if the value is a finite primitive number.</li>
 <li><code>false</code> otherwise.</li>
 </ul>
 <h2 id="examples">Examples</h2>
-<pre><code class="language-ts">// Standard functions
-isFunction(function () {})        // true
-isFunction(() =&gt; {})              // true
+<pre><code class="language-ts">isFiniteNumber(0)        // true
+isFiniteNumber(3.14)     // true
+isFiniteNumber(-100)     // true
 
-// Async functions
-isFunction(async function () {})  // true
-isFunction(async () =&gt; {})        // true
+isFiniteNumber(NaN)      // false
+isFiniteNumber(Infinity) // false
 
-// Generator functions
-isFunction(function* () {})       // true
-
-// Class constructors
-class MyClass {}
-isFunction(MyClass)               // true
-
-// Bound functions
-const fn = () =&gt; {};
-const bound = fn.bind(null);
-isFunction(bound)                 // true
-
-// Built-in functions
-isFunction(Math.max)              // true
-isFunction(Promise.resolve)       // true
-
-// Non-functions
-isFunction(123)                   // false
-isFunction('abc')                 // false
-isFunction({})                    // false
-isFunction(null)                  // false
-isFunction(undefined)             // false
-isFunction([])                    // false
-isFunction(Symbol())              // false
+isFiniteNumber(&quot;123&quot;)    // false
+isFiniteNumber(1n)       // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Classes are technically functions in JavaScript <code>(typeof class X {} === 'function')</code>, so they return true.</li>
-<li>Async functions, generator functions, and bound functions are all considered functions by this helper.</li>
-<li>This helper does not invoke the value; it only checks type.</li>
-<li>Use <code>normalizeFunction</code> if you need to wrap or coerce values into callable functions.</li>
-<li>Use <code>validateFunction</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
+<li>This helper is stricter than <code>isNumber</code>, which accepts <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code>.</li>
+<li>Wrapper objects (for example, <code>new Number(5)</code>) are rejected because they are not number primitives.</li>
+<li>Use <code>isInteger</code> if you need to confirm integer values.</li>
+<li>Use <code>normalizeFiniteNumber</code> if you need to coerce values into finite numbers.</li>
+<li>Use <code>validateFiniteNumber</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>
 
 

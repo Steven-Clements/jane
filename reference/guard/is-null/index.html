@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guard/is-function/">
+        <link rel="canonical" href="https://steven-clements.github.io/jane/reference/guard/is-null/">
       
       
-        <link rel="prev" href="../is-enum-value/">
-      
-      
-        <link rel="next" href="../is-integer/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>isFunction - Jane docs</title>
+        <title>isNull - Jane docs</title>
       
     
     
@@ -68,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#isfunction" class="md-skip">
+        <a href="#isnull" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              isFunction
+              isNull
             
           </span>
         </div>
@@ -224,20 +220,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -258,7 +252,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -301,20 +295,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -335,7 +327,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -490,37 +482,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    isFunction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../is-function/" class="md-nav__link">
         
   
   
@@ -536,70 +501,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Signature
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Returns
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1103,6 +1004,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#returns" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1152,11 +1064,12 @@
 
 
 
-<h1 id="isfunction">isFunction</h1>
-<p>Checks whether a value is a <em>function</em>. This helper never throws and never mutates input. Use it when you need to confirm callable values before running logic that expects a function.</p>
+<h1 id="isnull">isNull</h1>
+<p>Checks whether a value is null. This helper performs a strict equality check and never throws or mutates input. Use it when you need to confirm that a value is explicitly null before running normalization or validation.</p>
 <h2 id="signature">Signature</h2>
-<pre><code class="language-ts">function isFunction(value: unknown): value is Function
+<pre><code class="language-ts">function isNull(value: unknown): value is null
 </code></pre>
+<h2 id="parameters">Parameters</h2>
 <table>
 <thead>
 <tr>
@@ -1169,57 +1082,29 @@
 <tr>
 <td>value</td>
 <td><code>unknown</code></td>
-<td>The value to check. Must be a function (per JavaScript's <code>typeof</code> semantics), including class constructors, async functions, generator functions, and bound functions.</td>
+<td>The value to check. This helper returns <code>true</code> only when the value is exactly <code>null</code>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="returns">Returns</h2>
 <p>A boolean:</p>
 <ul>
-<li><code>true</code> if the value is a function (including classes, async, generator, and built-in functions).</li>
+<li><code>true</code> if the value is null.</li>
 <li><code>false</code> otherwise.</li>
 </ul>
 <h2 id="examples">Examples</h2>
-<pre><code class="language-ts">// Standard functions
-isFunction(function () {})        // true
-isFunction(() =&gt; {})              // true
+<pre><code class="language-ts">isNull(null)        // true
 
-// Async functions
-isFunction(async function () {})  // true
-isFunction(async () =&gt; {})        // true
-
-// Generator functions
-isFunction(function* () {})       // true
-
-// Class constructors
-class MyClass {}
-isFunction(MyClass)               // true
-
-// Bound functions
-const fn = () =&gt; {};
-const bound = fn.bind(null);
-isFunction(bound)                 // true
-
-// Built-in functions
-isFunction(Math.max)              // true
-isFunction(Promise.resolve)       // true
-
-// Non-functions
-isFunction(123)                   // false
-isFunction('abc')                 // false
-isFunction({})                    // false
-isFunction(null)                  // false
-isFunction(undefined)             // false
-isFunction([])                    // false
-isFunction(Symbol())              // false
+isNull(undefined)   // false
+isNull(0)           // false
+isNull('')          // false
+isNull({})          // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Classes are technically functions in JavaScript <code>(typeof class X {} === 'function')</code>, so they return true.</li>
-<li>Async functions, generator functions, and bound functions are all considered functions by this helper.</li>
-<li>This helper does not invoke the value; it only checks type.</li>
-<li>Use <code>normalizeFunction</code> if you need to wrap or coerce values into callable functions.</li>
-<li>Use <code>validateFunction</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
+<li>This helper does not treat <code>undefined</code> as <code>null</code>. Use <code>isNullOrUndefined</code> if you need to check for both.</li>
+<li>Use <code>normalizeNull</code> if you need to convert values into null.</li>
+<li>Use <code>validateNull</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>
 
 

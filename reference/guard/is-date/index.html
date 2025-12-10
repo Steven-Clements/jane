@@ -1153,7 +1153,13 @@
 
 
 <h1 id="isdate">isDate</h1>
-<p>Checks whether a value is a <em>valid Date instance</em>. This helper ensures the value is a <code>Date</code> object and that it represents a valid timestamp. It never throws and never mutates input.</p>
+<p>Checks whether a value is a valid Date instance.
+This helper verifies two things:</p>
+<ol>
+<li>The value is actually a <code>Date</code> object (<code>instanceof Date</code>).</li>
+<li>The internal timestamp is valid (<code>getTime()</code> is <em>not</em> <code>NaN</code>).</li>
+</ol>
+<p>It never throws and never mutates input.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function isDate(value: unknown): value is Date
 </code></pre>
@@ -1169,14 +1175,14 @@
 <tr>
 <td>value</td>
 <td><code>unknown</code></td>
-<td>The value to check. Must be a Date instance with a valid timestamp to return <code>true</code>.</td>
+<td>The value to check. Must be a <code>Date</code> instance with a valid timestamp to return <code>true</code>.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="returns">Returns</h2>
 <p>A boolean:</p>
 <ul>
-<li><code>true</code> if the value is a Date instance and <code>value.getTime()</code> is not <code>NaN</code>.</li>
+<li><code>true</code> if the value is a Date instance <em>and</em> its timestamp is valid.</li>
 <li><code>false</code> otherwise.</li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -1187,12 +1193,13 @@ isDate(new Date(&quot;invalid&quot;))        // false
 isDate(Date.now())                 // false
 isDate(&quot;2020-01-01&quot;)               // false
 isDate(null)                       // false
-isDate({})                         // f
+isDate({})                         // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This helper rejects invalid dates such as <code>new Date("invalid")</code>.</li>
-<li>Use <code>normalizeDate</code> if you need to convert values into Date instances.</li>
+<li>Invalid <code>Date</code> objects such as <code>new Date("invalid")</code> are rejected because their time value is <code>NaN</code>.</li>
+<li>This helper does <em>not</em> attempt to parse or coerce values into dates.</li>
+<li>Use <code>normalizeDate</code> if you need to convert values into <code>Date</code> instances.</li>
 <li>Use <code>validateDate</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>
 

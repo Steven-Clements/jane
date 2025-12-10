@@ -1175,7 +1175,8 @@
 
 
 <h1 id="isnumber">isNumber</h1>
-<p>Checks whether a value is a <em>finite primitive number</em>. This helper never throws and never mutates input. Use it when you need to confirm numeric types before running normalization or validation.</p>
+<p>Checks whether a value is a primitive number. This helper performs a strict typeof check and does not enforce finiteness.</p>
+<p>It accepts <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code> because they are still valid number primitives in JavaScript. This helper never throws and never mutates input.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function isNumber(value: unknown): value is number
 </code></pre>
@@ -1192,29 +1193,31 @@
 <tr>
 <td>value</td>
 <td><code>unknown</code></td>
-<td>The value to check. This helper performs a strict <code>typeof</code> check and only returns <code>true</code> for <em>finite primitive integers</em>.</td>
+<td>The value to check. This helper returns true only for primitive numbers.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="returns">Returns</h2>
 <p>A boolean:</p>
 <ul>
-<li><code>true</code> if the value is a finite primitive number</li>
-<li><code>false</code> otherwise</li>
+<li><code>true</code> if the value is a primitive number.</li>
+<li><code>false</code> otherwise.</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <pre><code class="language-ts">isNumber(42)          // true
 isNumber(0)           // true
 isNumber(-3.14)       // true
-isNumber(NaN)         // false
-isNumber(Infinity)    // false
+isNumber(NaN)         // true
+isNumber(Infinity)    // true
+
 isNumber(&quot;123&quot;)       // false
 isNumber(null)        // false
-isNumber(undefined)   // false
+isNumber(1n)          // false
+isNumber(new Number(5)) // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This helper rejects <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code> because they are not meaningful numeric values.</li>
+<li>This helper does not check for finiteness. Use <code>isFiniteNumber</code> if you need to reject <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code>.</li>
 <li>Use <code>isInteger</code> if you need to confirm integer values.</li>
 <li>Use <code>normalizeNumber</code> if you need to convert values into numbers.</li>
 <li>Use <code>validateNumber</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>

@@ -1215,6 +1215,7 @@ isInteger(null)        // false
 <h2 id="notes">Notes</h2>
 <ul>
 <li>This helper uses <code>Number.isInteger</code> internally, which rejects <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code>.</li>
+<li>BigInt values are not considered integers by this helper. Use <code>isBigInteger</code> for BigInt checks.</li>
 <li>Use <code>normalizeInteger</code> if you need to convert values into integers.</li>
 <li>Use <code>validateInteger</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>

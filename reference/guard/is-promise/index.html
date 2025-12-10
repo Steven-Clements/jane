@@ -1175,8 +1175,7 @@
 
 
 <h1 id="ispromise">isPromise</h1>
-<p>Checks whether a value is a <strong>Promise‑like object</strong>. This helper never throws and never mutates input. It performs a structural check to confirm that the value is an object with a callable <code>then</code> method.</p>
-<p>Use it when you need to confirm that a value behaves like a Promise before awaiting or chaining it.</p>
+<p>Checks whether a value is a <em>Promise</em>. This helper performs a strict <code>instanceof</code> check and never throws or mutates input. It accepts native Promise instances and Promise subclasses, but does not treat arbitrary thenables as Promises.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function isPromise(value: unknown): value is Promise&lt;unknown&gt;
 </code></pre>
@@ -1193,31 +1192,29 @@
 <tr>
 <td>value</td>
 <td><code>unknown</code></td>
-<td>The value to check. Must be a non‑null object with a callable then method to return <code>true</code>.</td>
+<td>The value to check. Returns <code>true</code> only if the value is a native Promise instance or a subclass of Promise.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="returns">Returns</h2>
 <p>A boolean:</p>
 <ul>
-<li><code>true</code> if the value is a Promise‑like object.</li>
-<li><code>false</code> otherwise.</li>
+<li>true if the value is a Promise</li>
+<li>false otherwise</li>
 </ul>
 <h2 id="examples">Examples</h2>
-<pre><code class="language-ts">isPromise(Promise.resolve(123))     // true
-isPromise(new Promise(() =&gt; {}))    // true
+<pre><code class="language-ts">isPromise(Promise.resolve())     // true
+isPromise(new Promise(() =&gt; {})) // true
 
-isPromise({ then: () =&gt; {} })       // true (Promise-like)
-isPromise({})                       // false
-isPromise(null)                     // false
-isPromise(&quot;hello&quot;)                  // false
-isPromise(123)                      // false
+isPromise({ then() {} })         // false
+isPromise('promise')             // false
+isPromise(null)                  // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This helper checks for <em>Promise‑like</em> values, not just native Promises.</li>
-<li>A value is considered a Promise if it is an object with a callable <code>then</code> method.</li>
-<li>Use <code>normalizePromise</code> if you need to convert values into Promises.</li>
+<li>This helper intentionally <em>does not</em> treat thenables as Promises.</li>
+<li>It accepts Promise subclasses.</li>
+<li>Use <code>normalizePromise</code> if you need to coerce values into Promises.</li>
 <li>Use <code>validatePromise</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>
 

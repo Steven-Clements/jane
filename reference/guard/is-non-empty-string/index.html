@@ -1175,7 +1175,7 @@
 
 
 <h1 id="isnonemptystring">isNonEmptyString</h1>
-<p>Checks whether a value is a <em>primitive, non‑empty string</em>. This helper never throws and never mutates input. It performs a strict <code>typeof</code> check and does not trim or normalize the value.</p>
+<p>Checks whether a value is a primitive, <em>non‑empty string</em>. This helper never throws and never mutates input. It performs a strict <code>typeof</code> check and does not trim, coerce, or normalize the value. Whitespace and zero‑width characters count as non‑empty. <code>String</code> objects (for example, <code>new String("hello")</code>) return <code>false</code>.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function isNonEmptyString(value: unknown): value is string
 </code></pre>
@@ -1192,7 +1192,7 @@
 <tr>
 <td>value</td>
 <td><code>unknown</code></td>
-<td>Checks whether a value is a primitive string with <code>length &gt; 0</code>, without trimming or normalization.</td>
+<td>The value to check. Must be a primitive string with length &gt; 0 to return true.</td>
 </tr>
 </tbody>
 </table>
@@ -1205,6 +1205,7 @@
 <h2 id="examples">Examples</h2>
 <pre><code class="language-ts">isNonEmptyString(&quot;hello&quot;)            // true
 isNonEmptyString(&quot; &quot;)                // true (whitespace counts as non-empty)
+isNonEmptyString(&quot;\u200B&quot;)           // true (zero-width space counts as non-empty)
 isNonEmptyString(&quot;&quot;)                 // false
 isNonEmptyString(123)                // false
 isNonEmptyString(null)               // false
@@ -1213,9 +1214,9 @@ isNonEmptyString(new String(&quot;x&quot;))    // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This helper does not trim whitespace.</li>
+<li>This helper does <em>not</em> trim whitespace.</li>
 <li>Zero‑width characters still count as non‑empty.</li>
-<li>This helper returns <code>false</code> for String objects (e.g., <code>new String("x")</code>).</li>
+<li>Returns <code>false</code> for String objects (e.g., <code>new String("x")</code>).</li>
 <li>Use <code>normalizeNonEmptyString</code> if you need trimming and conversion.</li>
 <li>Use <code>validateNonEmptyString</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>

@@ -1175,7 +1175,14 @@
 
 
 <h1 id="isrecord">isRecord</h1>
-<p>Checks whether a value is a <em>record-like object</em>. That is, a non‑null, non‑array object whose keys are strings. This helper never throws and never mutates input. Use it when you need to confirm that a value is suitable for string‑keyed object operations before running normalization or validation.</p>
+<p>Checks whether a value is a record-like object with string keys.</p>
+<p>A record is defined as:</p>
+<ol>
+<li>A non-null, non-array object.</li>
+<li>All own property keys are <em>strings</em> (symbols are not allowed).</li>
+<li>Objects with any prototype are accepted, including class instances and objects created with <code>Object.create(null)</code>.</li>
+</ol>
+<p>This helper never throws and never mutates input. Use it when you need to confirm that a value is suitable for <em>string-keyed object operations</em> before running normalization or validation.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function isRecord(value: unknown): value is Record&lt;string, unknown&gt;
 </code></pre>
@@ -1192,7 +1199,7 @@
 <tr>
 <td>value</td>
 <td><code>unknown</code></td>
-<td>The value to check. Must be a non‑null, non‑array object to return <code>true</code>.</td>
+<td>The value to check. Must be a non-null, non-array object whose own keys are strings to return <code>true</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1215,9 +1222,10 @@ isRecord(123)                    // false
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This helper is broader than <code>isPlainObject</code> because it allows any prototype.</li>
-<li>Use <code>isPlainObject</code> if you need to confirm <code>Object.prototype</code> as the prototype.</li>
-<li>Use <code>normalizeRecord</code> if you need to ensure the value becomes a record.</li>
+<li>This guard is stricter than <code>isObject</code> because it rejects arrays.</li>
+<li>It is stricter than <code>isRecord</code> because it also rejects symbol-keyed properties, fully aligning with TypeScript’s <code>Record&lt;string, unknown&gt;</code> type.</li>
+<li>Use <code>isPlainObject</code> if you also need the prototype to be exactly <code>Object.prototype</code>.</li>
+<li>Use <code>normalizeRecord</code> if you need to coerce values into records.</li>
 <li>Use <code>validateRecord</code> if you need a <code>Result&lt;T&gt;</code> instead of a boolean.</li>
 </ul>
 
