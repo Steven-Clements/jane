@@ -9,7 +9,6 @@ jobs:
   deploy-docs:
     name: Deploy MkDocs
     runs-on: ubuntu-latest
-    needs: release
 
     permissions:
       contents: write

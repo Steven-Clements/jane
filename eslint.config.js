@@ -8,6 +8,9 @@ export default [
     js.configs.recommended,
     ...tseslint.configs.recommended,
     {
+        ignores: ['virtual/', '**/virtual/', '**/*.md', '**/*.yml', '**/*.yaml'],
+    },
+    {
         files: ['**/*.ts'],
 
         languageOptions: {

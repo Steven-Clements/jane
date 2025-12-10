@@ -3,6 +3,8 @@ site_description: Process guides, tutorials, and reference information for using
 site_url: 'https://steven-clements.github.io/jane'
 
 theme: material
+exclude:
+  - virtual/*
 
 nav:
   - Meet Jane: index.md

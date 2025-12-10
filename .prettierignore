@@ -7,3 +7,6 @@
 *.yaml
 **/*.yml
 **/*.yaml
+
+virtual/
+**/virtual/
