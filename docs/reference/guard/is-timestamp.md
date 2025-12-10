@@ -1,6 +1,6 @@
 # isTimestamp
 
-Checks whether a value is a *valid numeric timestamp*. A timestamp is defined as a finite number representing milliseconds since the Unix epoch. This helper never throws and never mutates input. It performs a strict type check and does not coerce strings or other values into numbers.
+Checks whether a value is a Unix timestamp in milliseconds. A timestamp is defined as a finite integer number representing milliseconds since the Unix epoch (1970‑01‑01T00:00:00Z). This helper never throws and never mutates input. Use it when you need to confirm timestamp values before running normalization or validation.
 
 ## Signature
 
@@ -12,31 +12,30 @@ function isTimestamp(value: unknown): value is number
 
 | Name | Data type | Description |
 |---|---|---|
-| value | `unknown` | The value to check. Must be a finite number representing a valid millisecond timestamp to return `true`. |
+| value | `unknown` | true |
 
 ## Returns
 
 A boolean:
 
-- `true` if the value is a finite number and not `NaN`.
+- `true` if the value is a finite integer timestamp.
 - `false` otherwise.
 
-Examples
+## Examples
 
 ```ts
-isTimestamp(Date.now())        // true
-isTimestamp(1700000000000)     // true
+isTimestamp(1700000000000)   // true
+isTimestamp(0)               // true
+isTimestamp(-1000)           // true (pre‑epoch)
 
-isTimestamp("1700000000000")   // false
-isTimestamp(NaN)               // false
-isTimestamp(Infinity)          // false
-isTimestamp(null)              // false
-isTimestamp({})                // false
+isTimestamp(3.14)            // false
+isTimestamp("1700000000000") // false
+isTimestamp(NaN)             // false
 ```
 
 ## Notes
 
-- This helper does not validate ranges (e.g., future or past limits).
-- This helper does not accept strings, even numeric ones.
+- This helper does not accept fractional numbers or strings.
+- Negative timestamps are valid and represent dates before the Unix epoch.
 - Use `normalizeTimestamp` if you need to coerce values into timestamps.
 - Use `validateTimestamp` if you need a `Result<T>` instead of a boolean.

@@ -1,17 +1,13 @@
 /**
- * Checks whether a value is a Promise-like object.
+ * Checks whether a value is a Promise.
  *
- * This helper never throws and never mutates input. It performs a structural
- * check: the value must be a non-null object with a callable `then` method.
- * This includes native Promises and user-defined thenables.
+ * This helper performs a strict `instanceof` check against `Promise`. It never
+ * throws and never mutates input. It accepts native Promise instances and
+ * Promise subclasses, but does not treat arbitrary thenables as Promises.
  *
  * @param value - The value to check.
- * @returns `true` if the value is a Promise-like object, `false` otherwise.
+ * @returns `true` if the value is a Promise; `false` otherwise.
  */
 export default function isPromise(value: unknown): value is Promise<unknown> {
-    return (
-        value !== null &&
-        typeof value === 'object' &&
-        typeof (value as { then?: unknown }).then === 'function'
-    );
+    return value instanceof Promise;
 }
