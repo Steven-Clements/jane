@@ -1,10 +1,18 @@
-# Jane
+# Meet Jane
 
-Zero‑side‑effect normalization and validation helpers for JavaScript.
+**Less boilerplate. More workflow.**
 
-Jane is a small, clarity‑first helper library for **normalizing**, **validating**, and **safely parsing** unknown input in JavaScript and TypeScript.
+>Zero‑side‑effect helpers for predictable data sanity.
+
+---
+
+Jane is a small, clarity‑first helper library for *normalizing*, *validating*, and *safely parsing* unknown input in JavaScript and TypeScript.
 
 It’s built for developers who want predictable behavior, composable pipelines, and zero surprises — without schema systems, decorators, or framework lock‑in.
+
+- Jane is not a schema builder.
+- Jane is not a type generator.
+- Jane is not a runtime type system.
 
 Jane is intentionally small. Intentionally explicit. Intentionally boring in all the right ways.
 
@@ -25,7 +33,7 @@ Jane is:
 - **Framework‑agnostic**: Works in Node, serverless, workers, Express, Fastify, Bun, Deno.
 - **Focused**: Normalization → validation → result.
 
-If you want a dependable “standard library” for data sanity, Jane is your girl.
+If you want a dependable "standard library" for data sanity, Jane is your girl.
 
 ---
 
@@ -33,16 +41,34 @@ If you want a dependable “standard library” for data sanity, Jane is your gi
 
 Jane is designed for developers who:
 
-- Prefer **explicit, predictable behavior** over magic.
-- Want **pure functions** instead of schema DSLs.
-- Need **safe parsing** for config, requests, queries, and internal boundaries.
-- Value **clarity and maintainability** in long‑lived codebases.
+- Prefer *explicit, predictable behavior* over magic.
+- Want *pure functions* instead of schema DSLs.
+- Need *safe parsing* for config, requests, queries, and internal boundaries.
+- Value *clarity and maintainability* in long‑lived codebases.
 - Dislike validators that throw.
-- Want **small, composable building blocks** instead of monolithic schemas.
+- Want *small, composable building blocks* instead of monolithic schemas.
 
 If you’ve ever written your own tiny normalizers and validators because existing libraries felt too heavy — Jane was built for you.
 
----
+## A tiny example
+
+```ts
+import {
+    normalizeString,
+    validateNumber,
+    pipe
+} from "@steven-clements/jane";
+
+const parsePort = pipe(
+  normalizeString,
+  validateNumber,
+);
+
+parsePort("3000"); // { ok: true, value: 3000 }
+parsePort("abc");  // { ok: false, error: ... }
+```
+
+Jane stays out of your way. No schemas. No decorators. No magic.
 
 ## Installation
 
@@ -50,13 +76,10 @@ If you’ve ever written your own tiny normalizers and validators because existi
 npm install @steven-clements/jane
 ```
 
----
-
 ## Documentation
 
-Documentation is available at:
+Explore our comprehensive documentation:
 
-- [Project overview](index.md)
 - [Reference](reference/overview.md)
 - [Contributing](contributing/overview.md)
 
@@ -66,8 +89,6 @@ Jane is licensed under the Apache License, Version 2.0.
 
 <http://www.apache.org/licenses/LICENSE-2.0>
 
-## Author
-
-Steven "Chris" Clements
+---
 
 Designed for clarity, composability, and long‑term maintainability.

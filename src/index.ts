@@ -1,1 +1,1 @@
-export * from './guard/index.js';
+export * from './type-guards/index.js';
