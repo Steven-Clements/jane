@@ -1,1 +1,6 @@
-export { normalizeBoolean, normalizeString } from './primitives/index.js';
+export {
+    normalizeBoolean,
+    normalizeNonEmptyString,
+    normalizeNumber,
+    normalizeString,
+} from './primitives/index.js';

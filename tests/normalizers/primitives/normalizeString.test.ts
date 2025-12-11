@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizeString from '../../src/normalizers/primitives/normalizeString.js';
+import normalizeString from '../../../src/normalizers/primitives/normalizeString.js';
 
 describe('normalizeString', () => {
     it('returns native strings unchanged except for trimming', () => {

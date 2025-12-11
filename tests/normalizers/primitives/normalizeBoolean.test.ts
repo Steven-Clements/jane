@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizeBoolean from '../../src/normalizers/primitives/normalizeBoolean.js';
+import normalizeBoolean from '../../../src/normalizers/primitives/normalizeBoolean.js';
 
 describe('normalizeBoolean', () => {
     it('returns boolean values unchanged', () => {
