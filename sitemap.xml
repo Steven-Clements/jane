@@ -29,6 +29,10 @@
          <lastmod>2025-12-11</lastmod>
     </url>
     <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-async-iterable/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
          <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-boolean/</loc>
          <lastmod>2025-12-11</lastmod>
     </url>
@@ -38,6 +42,14 @@
     </url>
     <url>
          <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-integer/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-iterable/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-json/</loc>
          <lastmod>2025-12-11</lastmod>
     </url>
     <url>
@@ -53,7 +65,23 @@
          <lastmod>2025-12-11</lastmod>
     </url>
     <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-plain-object/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-port/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
          <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-positive-integer/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-promise/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-record/</loc>
          <lastmod>2025-12-11</lastmod>
     </url>
     <url>
@@ -62,6 +90,10 @@
     </url>
     <url>
          <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-string/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/normalizers/primitives/normalize-timestamp/</loc>
          <lastmod>2025-12-11</lastmod>
     </url>
     <url>
