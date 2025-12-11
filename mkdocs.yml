@@ -57,13 +57,14 @@ nav:
         - isIterable: reference/type-guards/protocols/is-iterable.md
         - isPromise: reference/type-guards/protocols/is-promise.md
     - Normalizers:
-      - Overview: reference/normalizers/primitives/index.md
+      - Overview: reference/normalizers/index.md
       - Primitives:
-        - Overview: index.md
+        - Overview: reference/normalizers/primitives/index.md
         - normalizeBoolean: reference/normalizers/primitives/normalize-boolean.md
         - normalizeNonEmptyString: reference/normalizers/primitives/normalize-non-empty-string.md
         - normalizeNumber: reference/normalizers/primitives/normalize-number.md
         - normalizeString: reference/normalizers/primitives/normalize-string.md
+        - normalizeInteger: reference/normalizers/primitives/normalize-integer.md
   - Contributing:
     - Overview: contributing/overview.md
     - Development workflow: contributing/development-workflow.md
