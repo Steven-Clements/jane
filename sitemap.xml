@@ -2,170 +2,190 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://steven-clements.github.io/jane/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
          <loc>https://steven-clements.github.io/jane/contributing/development-workflow/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
          <loc>https://steven-clements.github.io/jane/contributing/overview/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
          <loc>https://steven-clements.github.io/jane/contributing/restricted-repo-files/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
          <loc>https://steven-clements.github.io/jane/reference/overview/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-array/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/collections/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-async-iterable/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/collections/is-map/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-big-integer/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/collections/is-set/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-boolean/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/collections/is-typed-array/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-date/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/collections/is-weak-map/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-enum-value/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/collections/is-weak-set/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-error/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-finite-number/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-big-integer/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-function/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-boolean/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-integer/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-finite-number/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-iterable/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-integer/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-json/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-non-empty-string/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-map/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-non-negative-number/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-non-empty-array/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-null-or-undefined/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-non-empty-string/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-null/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-non-negative-number/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-number/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-null-or-undefined/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-positive-integer/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-null/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-safe-integer/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-number/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-string/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-object/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-symbol/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-plain-object/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/primitives/is-undefined/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-port/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/protocols/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-positive-integer/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/protocols/is-async-iterable/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-promise/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/protocols/is-iterable/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-record/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/protocols/is-promise/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-reg-exp/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-safe-integer/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-date/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-set/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-enum-value/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-string/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-error/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-symbol/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-function/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-timestamp/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-json/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-tuple/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-port/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-typed-array/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-reg-exp/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-undefined/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/semantic/is-timestamp/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-weak-map/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
     <url>
-         <loc>https://steven-clements.github.io/jane/reference/guard/is-weak-set/</loc>
-         <lastmod>2025-12-10</lastmod>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/is-array/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/is-non-empty-array/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/is-object/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/is-plain-object/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/is-record/</loc>
+         <lastmod>2025-12-11</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/is-tuple/</loc>
+         <lastmod>2025-12-11</lastmod>
     </url>
 </urlset>
