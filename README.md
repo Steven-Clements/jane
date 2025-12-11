@@ -1,5 +1,7 @@
 # Meet Jane
 
+> Less boilerplate. More flow.
+
 Zero‑side‑effect normalization and validation helpers for JavaScript.
 
 Jane is a small, clarity‑first helper library for **normalizing**, **validating**, and **safely parsing** unknown input in JavaScript and TypeScript.

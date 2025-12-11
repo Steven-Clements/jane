@@ -10,6 +10,30 @@
     "bugs": {
         "url": "https://github.com/Steven-Clements/jane/issues"
     },
+    "keywords": [
+        "type",
+        "guards",
+        "normalization",
+        "validation",
+        "safe-parsing",
+        "validator",
+        "normalizer",
+        "sanitize",
+        "input-validation",
+        "input-normalization",
+        "pure-functions",
+        "deterministic",
+        "composable",
+        "pipeline",
+        "zero-dependencies",
+        "no-side-effects",
+        "type-safety",
+        "runtime-types",
+        "runtime-validation",
+        "config-validation",
+        "request-validation",
+        "api-validation"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Steven-Clements/jane.git"
