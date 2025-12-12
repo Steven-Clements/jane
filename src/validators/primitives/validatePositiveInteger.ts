@@ -1,4 +1,4 @@
-import isPositiveInteger from '../../type-guards/primitives/isPositiveInteger.js';
+import isPositiveInteger from '../../type-guards/primitives/isPositiveInteger';
 import type { ValidationResult } from '../../types';
 
 /**

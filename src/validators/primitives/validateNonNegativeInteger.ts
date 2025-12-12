@@ -1,5 +1,5 @@
-import isNonNegativeInteger from '../../type-guards/primitives/isNonNegativeInteger.js';
-import type { ValidationResult } from '../../types/index.js';
+import isNonNegativeInteger from '../../type-guards/primitives/isNonNegativeInteger';
+import type { ValidationResult } from '../../types';
 
 /**
  * Validates that a value is a non-negative integer (0 or greater).

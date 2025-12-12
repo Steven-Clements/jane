@@ -1,5 +1,5 @@
 import isInteger from '../../type-guards/primitives/isInteger.js';
-import type { ValidationResult } from '../../types/index.js';
+import type { ValidationResult } from '../../types';
 
 /**
  * Checks whether a value is a **finite integer**.

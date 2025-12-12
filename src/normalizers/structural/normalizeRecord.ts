@@ -1,4 +1,4 @@
-import normalizePlainObject from './normalizePlainObject.js';
+import normalizePlainObject from './normalizePlainObject';
 
 /**
  * Normalizes a record-like value using a value normalizer.

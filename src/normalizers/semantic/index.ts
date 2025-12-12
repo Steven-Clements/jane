@@ -1,3 +1,3 @@
-export { default as normalizeJSON } from './normalizeJSON.js';
-export { default as normalizePort } from '../semantic/normalizePort.js';
-export { default as normalizeTimestamp } from './normalizeTimestamp.js';
+export { default as normalizeJSON } from './normalizeJSON';
+export { default as normalizePort } from '../semantic/normalizePort';
+export { default as normalizeTimestamp } from './normalizeTimestamp';
