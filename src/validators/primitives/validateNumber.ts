@@ -1,4 +1,4 @@
-import isNumber from '../../type-guards/primitives/isNumber.js';
+import isNumber from '../../type-guards/primitives/isNumber';
 import type { ValidationResult } from '../../types';
 
 /**

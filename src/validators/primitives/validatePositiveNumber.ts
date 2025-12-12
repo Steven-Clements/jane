@@ -1,5 +1,5 @@
-import isPositiveNumber from '../../type-guards/primitives/isPositiveNumber.js';
-import type { ValidationResult } from '../../types/index.js';
+import isPositiveNumber from '../../type-guards/primitives/isPositiveNumber';
+import type { ValidationResult } from '../../types';
 
 /**
  * Validates that a value is a positive number (> 0).

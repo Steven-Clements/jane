@@ -1,5 +1,5 @@
 import isNegativeInteger from '../../type-guards/primitives/isNegativeInteger.js';
-import type { ValidationResult } from '../../types/index.js';
+import type { ValidationResult } from '../../types';
 
 /**
  * Validates that a value is a negative integer (< 0).

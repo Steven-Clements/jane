@@ -1,5 +1,5 @@
-import isNonNegativeNumber from '../../type-guards/primitives/isNonNegativeNumber.js';
-import type { ValidationResult } from '../../types/index.js';
+import isNonNegativeNumber from '../../type-guards/primitives/isNonNegativeNumber';
+import type { ValidationResult } from '../../types';
 
 /**
  * Validates that a value is a non-negative number.

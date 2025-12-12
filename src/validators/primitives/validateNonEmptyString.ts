@@ -1,5 +1,5 @@
-import isNonEmptyString from '../../type-guards/primitives/isNonEmptyString.js';
-import type { ValidationResult } from '../../types/index.js';
+import isNonEmptyString from '../../type-guards/primitives/isNonEmptyString';
+import type { ValidationResult } from '../../types';
 
 /**
  * Checks whether a value is a **non‑empty string**.
