@@ -15,4 +15,14 @@ export {
     validateSafeInteger,
     validateString,
     validateSymbol,
+    validateUndefined,
 } from './primitives/index';
+
+export {
+    validateArray,
+    validateNonEmptyArray,
+    validateObject,
+    validatePlainObject,
+    validateRecord,
+    validateTuple,
+} from './structural/index';

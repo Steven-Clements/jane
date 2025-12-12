@@ -103,7 +103,7 @@ nav:
         - Overview: reference/validators/primitives/index.md
         - validateBigInteger: reference/validators/primitives/validate-big-integer.md
         - validateBoolean: reference/validators/primitives/validate-boolean.md
-        - validateFiniteNumber: reference/validators/validate-finite-number.md
+        - validateFiniteNumber: reference/validators/primitives/validate-finite-number.md
         - validateInteger: reference/validators/primitives/validate-integer.md
         - validateNegativeInteger: reference/validators/primitives/validate-negative-integer.md
         - validateNegativeNumber: reference/validators/primitives/validate-negative-number.md
@@ -117,8 +117,15 @@ nav:
         - validateSafeInteger: reference/validators/primitives/validate-safe-integer.md
         - validateString: reference/validators/primitives/validate-string.md
         - validateSymbol: reference/validators/primitives/validate-symbol.md
+        - validateUndefined: reference/validators/primitives/validate-undefined.md
       - Structural:
         - Overview: reference/validators/structural/index.md
+        - validateArray: reference/validators/structural/validate-array.md
+        - validateNonEmptyArray: reference/validators/structural/validate-non-empty-array.md
+        - validateObject: reference/validators/structural/validate-object.md
+        - validatePlainObject: reference/validators/structural/validate-plain-object.md
+        - validateRecord: reference/validators/structural/validate-record.md
+        - validateTuple: reference/validators/structural/validate-tuple.md
       - Collections:
         - Overview: reference/validators/collections/index.md
       - Semantic:

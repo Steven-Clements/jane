@@ -1,7 +1,5 @@
 # validateNonNegativeNumber
 
-## Description
-
 Validates that a value is a **non-negative number** — a finite numeric primitive greater than or equal to zero. Fractional values are allowed. No coercion is performed.
 
 This helper never throws and never mutates input. It is built on top of [isNonNegativeNumber](../../type-guards/primitives/is-non-negative-number.md), ensuring a strict and predictable numeric check.
