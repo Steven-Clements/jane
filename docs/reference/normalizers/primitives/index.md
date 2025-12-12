@@ -5,9 +5,13 @@ Primitive normalizers convert unknown or inconsistent input into predictable pri
 Primitive normalizers are the simplest and most frequently used normalization tools in Jane. They help you prepare raw input for validation or parsing by ensuring that values are trimmed, canonicalized, or safely interpreted.
 
 - [normalizeBoolean](normalize-boolean.md): Interprets native booleans and `"true"` or `"false"` strings.
-- [normalizeNonEmptyString](normalize-non-empty-string.md): Trims native strings and returns a non‑empty result or `null`.
+- [normalizeFiniteNumber](normalize-finite-number.md):
 - [normalizeInteger](normalize-integer.md): Converts native integers and integer strings into finite integers.
+- [normalizeNonEmptyString](normalize-non-empty-string.md): Trims native strings and returns a non‑empty result or `null`.
+- [normalizeNonNegativeNumber](normalize-non-negative-number.md):
 - [normalizeNumber](normalize-number.md): Converts native numbers and numeric strings into finite numbers.
+- [normalizePositiveInteger](normalize-positive-integer.md):
+- [normalizeSafeInteger](normalize-safe-integer.md):
 - [normalizeString](normalize-string.md): Trims native strings and returns them unchanged.
 
 Each helper is pure, predictable, and designed to be composed with validators and parsers.

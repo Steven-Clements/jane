@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizePort from '../../../src/normalizers/primitives/normalizePort.js';
+import normalizePort from '../../../src/normalizers/semantic/normalizePort.js';
 
 describe('normalizePort (non‑strict mode)', () => {
     it('returns valid numeric ports unchanged', () => {

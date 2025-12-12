@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizeAsyncIterable from '../../../src/normalizers/primitives/normalizeAsyncIterable.js';
+import normalizeAsyncIterable from '../../../src/normalizers/protocols/normalizeAsyncIterable.js';
 
 describe('normalizeAsyncIterable', () => {
     it('accepts async generator objects', () => {

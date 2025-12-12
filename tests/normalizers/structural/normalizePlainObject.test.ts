@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizePlainObject from '../../../src/normalizers/primitives/normalizePlainObject.js';
+import normalizePlainObject from '../../../src/normalizers/structural/normalizePlainObject';
 
 describe('normalizePlainObject', () => {
     it('accepts plain objects', () => {

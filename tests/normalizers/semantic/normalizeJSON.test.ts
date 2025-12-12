@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizeJSON from '../../../src/normalizers/primitives/normalizeJSON';
+import normalizeJSON from '../../../src/normalizers/semantic/normalizeJSON';
 
 describe('normalizeJSON (non‑strict mode)', () => {
     it('returns objects and arrays unchanged', () => {

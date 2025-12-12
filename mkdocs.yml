@@ -61,10 +61,28 @@ nav:
       - Primitives:
         - Overview: reference/normalizers/primitives/index.md
         - normalizeBoolean: reference/normalizers/primitives/normalize-boolean.md
+        - normalizeFiniteNumber: reference/normalizers/primitives/normalize-finite-number.md
+        - normalizeInteger: reference/normalizers/primitives/normalize-integer.md        
         - normalizeNonEmptyString: reference/normalizers/primitives/normalize-non-empty-string.md
+        - normalizeNonNegativeNumber: reference/normalizers/primitives/normalize-non-negative-number.md
         - normalizeNumber: reference/normalizers/primitives/normalize-number.md
+        - normalizePositiveInteger: reference/normalizers/primitives/normalize-positive-integer.md
+        - normalizeSafeInteger: reference/normalizers/primitives/normalize-safe-integer.md
         - normalizeString: reference/normalizers/primitives/normalize-string.md
-        - normalizeInteger: reference/normalizers/primitives/normalize-integer.md
+      - Structural:
+        - Overview: reference/normalizers/structural/index.md
+        - normalizePlainObject: reference/normalizers/structural/normalize-plain-object.md
+        - normalizeRecord: reference/normalizers/structural/normalize-record.md        
+      - Semantic:
+        - Overview: reference/normalizers/semantic/index.md
+        - normalizeJSON: reference/normalizers/semantic/normalize-json.md
+        - normalizePort: reference/normalizers/semantic/normalize-port.md
+        - normalizeTimestamp: reference/normalizers/semantic/normalize-timestamp.md
+      - Protocols:
+        - Overview: reference/normalizers/protocols/index.md
+        - normalizeAsyncIterable: reference/normalizers/protocols/normalize-async-iterable.md
+        - normalizeIterable: reference/normalizers/protocols/normalize-iterable.md
+        - normalizePromise: reference/normalizers/protocols/normalize-promise.md
   - Contributing:
     - Overview: contributing/overview.md
     - Development workflow: contributing/development-workflow.md

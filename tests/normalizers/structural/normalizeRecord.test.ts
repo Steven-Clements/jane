@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizeRecord from '../../../src/normalizers/primitives/normalizeRecord.js';
+import normalizeRecord from '../../../src/normalizers/structural/normalizeRecord.js';
 
 const normalizeNumber = (v: unknown): number | null =>
     typeof v === 'number' && Number.isFinite(v) ? v : null;

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizeTimestamp from '../../../src/normalizers/primitives/normalizeTimestamp';
+import normalizeTimestamp from '../../../src/normalizers/semantic/normalizeTimestamp';
 
 describe('normalizeTimestamp (non-strict mode)', () => {
     it('returns epoch ms for valid Date instances', () => {

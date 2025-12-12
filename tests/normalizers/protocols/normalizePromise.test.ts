@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizePromise from '../../../src/normalizers/primitives/normalizePromise.js';
+import normalizePromise from '../../../src/normalizers/protocols/normalizePromise.js';
 
 describe('normalizePromise', () => {
     it('returns real promises unchanged', () => {

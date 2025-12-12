@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import normalizeIterable from '../../../src/normalizers/primitives/normalizeIterable.js';
+import normalizeIterable from '../../../src/normalizers/protocols/normalizeIterable.js';
 
 describe('normalizeIterable', () => {
     it('returns arrays unchanged', () => {

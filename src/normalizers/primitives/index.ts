@@ -1,4 +1,9 @@
 export { default as normalizeBoolean } from './normalizeBoolean.js';
+export { default as normalizeFiniteNumber } from './normalizeFiniteNumber.js';
+export { default as normalizeInteger } from './normalizeInteger.js';
 export { default as normalizeNonEmptyString } from './normalizeNonEmptyString.js';
-export { default as normalizeString } from './normalizeString.js';
+export { default as normalizeNonNegativeNumber } from './normalizeNonNegativeNumber.js';
 export { default as normalizeNumber } from './normalizeNumber.js';
+export { default as normalizePositiveInteger } from './normalizePositiveInteger.js';
+export { default as normalizeSafeInteger } from './normalizeSafeInteger.js';
+export { default as normalizeString } from './normalizeString.js';
