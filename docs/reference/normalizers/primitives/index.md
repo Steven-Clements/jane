@@ -8,7 +8,7 @@ Primitive normalizers are the simplest and most frequently used normalization to
 - [normalizeFiniteNumber](normalize-finite-number.md):
 - [normalizeInteger](normalize-integer.md): Converts native integers and integer strings into finite integers.
 - [normalizeNonEmptyString](normalize-non-empty-string.md): Trims native strings and returns a non‑empty result or `null`.
-- [normalizeNonNegativeNumber](normalize-non-negative-number.md):
+- [normalizeNonNegativeNumber](./normalize-non-negative-number.md):
 - [normalizeNumber](normalize-number.md): Converts native numbers and numeric strings into finite numbers.
 - [normalizePositiveInteger](normalize-positive-integer.md):
 - [normalizeSafeInteger](normalize-safe-integer.md):

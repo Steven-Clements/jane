@@ -53,4 +53,4 @@ validateNonEmptyString(123, "age")
 ## Notes
 
 - Use [validateNonEmptyString](validate-non-empty-string.md) when a string with meaningful content is required.
-- Combine with [normalizeString](normalize-string.md) if trimming or other normalization is desired before validation.
+- Combine with [normalizeString](../../normalizers/primitives/normalize-string.md) if trimming or other normalization is desired before validation.

@@ -8,6 +8,9 @@ nav:
   - Meet Jane: index.md
   - Reference:
     - Overview: reference/overview.md
+    - Types:
+      - Overview: reference/types/index.md
+      - ValidationResult: reference/types/validation-result.md
     - Type guards:
       - Overview: reference/type-guards/index.md
       - Primitives:
@@ -16,12 +19,16 @@ nav:
         - isBoolean: reference/type-guards/primitives/is-boolean.md
         - isFiniteNumber: reference/type-guards/primitives/is-finite-number.md
         - isInteger: reference/type-guards/primitives/is-integer.md
+        - isNegativeInteger: reference/type-guards/primitives/is-negative-integer.md
+        - isNegativeNumber: reference/type-guards/primitives/is-negative-number.md
         - isNonEmptyString: reference/type-guards/primitives/is-non-empty-string.md
+        - isNonNegativeInteger: reference/type-guards/primitives/is-non-negative-integer.md
         - isNonNegativeNumber: reference/type-guards/primitives/is-non-negative-number.md
         - isNull: reference/type-guards/primitives/is-null.md
         - isNullOrUndefined: reference/type-guards/primitives/is-null-or-undefined.md
         - isNumber: reference/type-guards/primitives/is-number.md
         - isPositiveInteger: reference/type-guards/primitives/is-positive-integer.md
+        - isPositiveNumber: reference/type-guards/primitives/is-positive-number.md
         - isSafeInteger: reference/type-guards/primitives/is-safe-integer.md
         - isString: reference/type-guards/primitives/is-string.md
         - isSymbol: reference/type-guards/primitives/is-symbol.md
@@ -62,11 +69,15 @@ nav:
         - Overview: reference/normalizers/primitives/index.md
         - normalizeBoolean: reference/normalizers/primitives/normalize-boolean.md
         - normalizeFiniteNumber: reference/normalizers/primitives/normalize-finite-number.md
-        - normalizeInteger: reference/normalizers/primitives/normalize-integer.md        
+        - normalizeInteger: reference/normalizers/primitives/normalize-integer.md
+        - normalizeNegativeInteger: reference/normalizers/primitives/normalize-negative-integer.md
+        - normalizeNegativeNumber: reference/normalizers/primitives/normalize-negative-number.md
         - normalizeNonEmptyString: reference/normalizers/primitives/normalize-non-empty-string.md
+        - normalizeNonNegativeInteger: reference/normalizers/primitives/normalize-non-negative-integer.md
         - normalizeNonNegativeNumber: reference/normalizers/primitives/normalize-non-negative-number.md
         - normalizeNumber: reference/normalizers/primitives/normalize-number.md
         - normalizePositiveInteger: reference/normalizers/primitives/normalize-positive-integer.md
+        - normalizePositiveNumber: reference/normalizers/primitives/normalize-positive-number.md
         - normalizeSafeInteger: reference/normalizers/primitives/normalize-safe-integer.md
         - normalizeString: reference/normalizers/primitives/normalize-string.md
       - Structural:
@@ -84,9 +95,18 @@ nav:
         - normalizeIterable: reference/normalizers/protocols/normalize-iterable.md
         - normalizePromise: reference/normalizers/protocols/normalize-promise.md
     - Validators:
-      - Overview: index.md
+      - Overview: reference/validators/index.md
       - Primitives:
-        - Overview: index.md
+        - Overview: reference/validators/primitives/index.md
+        - validateInteger: reference/validators/primitives/validate-integer.md
+        - validateNegativeInteger: reference/validators/primitives/validate-negative-integer.md
+        - validateNegativeNumber: reference/validators/primitives/validate-negative-number.md
+        - validateNonEmptyString: reference/validators/primitives/validate-non-empty-string.md
+        - validateNonNegativeInteger: reference/validators/primitives/validate-non-negative-integer.md
+        - validateNonNegativeInteger: reference/validators/primitives/validate-non-negative-number.md
+        - validateNumber: reference/validators/primitives/validate-number.md
+        - validatePositiveInteger: reference/validators/primitives/validate-positive-integer.md
+        - validatePositiveNumber: reference/validators/primitives/validate-positive-number.md
         - validateString: reference/validators/primitives/validate-string.md
   - Contributing:
     - Overview: contributing/overview.md

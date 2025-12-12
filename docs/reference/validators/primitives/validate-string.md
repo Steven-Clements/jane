@@ -52,6 +52,6 @@ validateNonEmptyString(123, "age")
 
 ## Notes
 
-- Use [validateNonEmptyString](../../validators/validate-non-empty-string.md) when a string of any content is required.
+<!-- - Use [validateNonEmptyString](../../validators/validate-non-empty-string.md) when a string of any content is required. -->
 - Combine with [normalizeString](../../normalizers/primitives/normalize-string.md) if trimming or other normalization is needed.
 - Strictly primitive strings only; `String` objects fail.

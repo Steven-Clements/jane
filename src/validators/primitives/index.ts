@@ -1,6 +1,10 @@
 export { default as validateInteger } from './validateInteger.js';
+export { default as validateNativeInteger } from './validateNegativeInteger.js';
+export { default as validateNegativeNumber } from './validateNegativeNumber.js';
 export { default as validateNonEmptyString } from './validateNonEmptyString.js';
+export { default as validateNonNegativeInteger } from './validateNonNegativeInteger.js';
 export { default as validateNonNegativeNumber } from './validateNonNegativeNumber.js';
 export { default as validateNumber } from './validateNumber.js';
 export { default as validatePositiveInteger } from './validatePositiveInteger.js';
+export { default as validatePositiveNumber } from './validatePositiveNumber.js';
 export { default as validateString } from './validateString.js';

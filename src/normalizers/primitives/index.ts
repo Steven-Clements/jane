@@ -1,9 +1,13 @@
 export { default as normalizeBoolean } from './normalizeBoolean.js';
 export { default as normalizeFiniteNumber } from './normalizeFiniteNumber.js';
 export { default as normalizeInteger } from './normalizeInteger.js';
+export { default as normalizeNegativeInteger } from './normalizeNegativeInteger.js';
+export { default as normalizeNegativeNumber } from './normalizeNegativeNumber.js';
 export { default as normalizeNonEmptyString } from './normalizeNonEmptyString.js';
+export { default as normalizeNonNegativeInteger } from './normalizeNonNegativeInteger.js';
 export { default as normalizeNonNegativeNumber } from './normalizeNonNegativeNumber.js';
 export { default as normalizeNumber } from './normalizeNumber.js';
 export { default as normalizePositiveInteger } from './normalizePositiveInteger.js';
+export { default as normalizePositiveNumber } from './normalizePositiveNumber.js';
 export { default as normalizeSafeInteger } from './normalizeSafeInteger.js';
 export { default as normalizeString } from './normalizeString.js';
