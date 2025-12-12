@@ -22,7 +22,7 @@ function validateNonNegativeNumber(
 One of:
 
 - **Success**: `{ ok: true; value: number }`
-- **Failure**:
+- **Failure**: `{ ok: false, field: string, message: string }`
 
 ```ts
 {

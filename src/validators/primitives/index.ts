@@ -1,10 +1,16 @@
+export { default as validateBigInteger } from './validateBigInteger';
+export { default as validateBoolean } from './validateBoolean';
+export { default as validateFiniteNumber } from './validateFiniteNumber';
 export { default as validateInteger } from './validateInteger';
 export { default as validateNativeInteger } from './validateNegativeInteger';
 export { default as validateNegativeNumber } from './validateNegativeNumber';
 export { default as validateNonEmptyString } from './validateNonEmptyString';
 export { default as validateNonNegativeInteger } from './validateNonNegativeInteger';
 export { default as validateNonNegativeNumber } from './validateNonNegativeNumber';
+export { default as validateNull } from './validateNull';
 export { default as validateNumber } from './validateNumber';
 export { default as validatePositiveInteger } from './validatePositiveInteger';
 export { default as validatePositiveNumber } from './validatePositiveNumber';
+export { default as validateSafeInteger } from './validateSafeInteger';
 export { default as validateString } from './validateString';
+export { default as validateSymbol } from './validateSymbol';

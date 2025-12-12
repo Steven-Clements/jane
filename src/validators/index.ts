@@ -1,12 +1,18 @@
 export {
+    validateBigInteger,
+    validateBoolean,
+    validateFiniteNumber,
     validateInteger,
     validateNativeInteger,
     validateNegativeNumber,
     validateNonEmptyString,
     validateNonNegativeInteger,
     validateNonNegativeNumber,
+    validateNull,
     validateNumber,
     validatePositiveInteger,
     validatePositiveNumber,
+    validateSafeInteger,
     validateString,
+    validateSymbol,
 } from './primitives/index';
