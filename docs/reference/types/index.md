@@ -8,18 +8,16 @@ Jane’s utility types enforce non-nullability where possible and focus on clear
 
 These are the essential TypeScript types used to define and communicate predictable data states:
 
-* [ValidationResult](./validation-result.md): The mandatory return type for all **Validator** functions. It is a discriminated union that enforces a clear success/failure contract:
-  * **Success**: `{ ok: true; value: T; }`: The validated, typed value.
-  * **Failure**: `{ ok: false; message: string; field: string; }`: Contextual error details.
+- [ValidationResult](./validation-result.md): The mandatory return type for all **Validator** functions. It is a discriminated union that enforces a clear success or failure contract.
 
 ## When to Refer to Type Definitions
 
 You primarily interact with these definitions when:
 
-* Defining the signature for a new guard, normalizer, validator, or parser.
-* Declaring the specific type a function returns after processing data through one of Jane’s layers.
-* Creating custom wrappers or higher-order functions that compose Jane’s utilities.
-* Documenting the input and output expectations of your application's data flow.
+- Defining the signature for a new guard, normalizer, validator, or parser.
+- Declaring the specific type a function returns after processing data through one of Jane’s layers.
+- Creating custom wrappers or higher-order functions that compose Jane’s utilities.
+- Documenting the input and output expectations of your application's data flow.
 
 ## Why Type Definitions Matter
 

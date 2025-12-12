@@ -44,4 +44,12 @@ describe('normalizeFiniteNumber', () => {
         expect(normalizeFiniteNumber(Symbol())).toBeNull();
         expect(normalizeFiniteNumber(() => {})).toBeNull();
     });
+
+    it('returns null for Infinity', () => {
+        expect(normalizeFiniteNumber(Infinity)).toBeNull();
+    });
+
+    it('returns null for -Infinity', () => {
+        expect(normalizeFiniteNumber(-Infinity)).toBeNull();
+    });
 });

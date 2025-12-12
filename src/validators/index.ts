@@ -26,3 +26,11 @@ export {
     validateRecord,
     validateTuple,
 } from './structural/index';
+
+export {
+    validateMap,
+    validateSet,
+    validateTypedArray,
+    validateWeakMap,
+    validateWeakSet,
+} from './collections/index';

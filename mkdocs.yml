@@ -128,6 +128,11 @@ nav:
         - validateTuple: reference/validators/structural/validate-tuple.md
       - Collections:
         - Overview: reference/validators/collections/index.md
+        - validateMap: reference/validators/collections/validate-map.md
+        - validateSet: reference/validators/collections/validate-set.md
+        - validateTypedArray: reference/validators/collections/validate-typed-array.md
+        - validateWeakMap: reference/validators/collections/validate-weak-map.md
+        - validateWeakSet: reference/validators/collections/validate-weak-set.md
       - Semantic:
         - Overview: reference/validators/semantic/index.md
       - Protocols:

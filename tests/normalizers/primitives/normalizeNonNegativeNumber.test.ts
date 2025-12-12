@@ -46,4 +46,8 @@ describe('normalizeNonNegativeNumber', () => {
         expect(normalizeNonNegativeNumber(Symbol())).toBeNull();
         expect(normalizeNonNegativeNumber(() => {})).toBeNull();
     });
+
+    it('returns null for Infinity', () => {
+        expect(normalizeNonNegativeNumber(Infinity)).toBeNull();
+    });
 });
