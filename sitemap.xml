@@ -276,4 +276,20 @@
          <loc>https://steven-clements.github.io/jane/reference/type-guards/structural/is-tuple/</loc>
          <lastmod>2025-12-12</lastmod>
     </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/types/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/types/validation-result/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/validate-string/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
 </urlset>
