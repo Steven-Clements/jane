@@ -44,7 +44,6 @@
     "main": "index.js",
     "files": [
         "dist",
-        "src",
         "README.md",
         "LICENSE"
     ],
