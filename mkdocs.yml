@@ -83,6 +83,11 @@ nav:
         - normalizeAsyncIterable: reference/normalizers/protocols/normalize-async-iterable.md
         - normalizeIterable: reference/normalizers/protocols/normalize-iterable.md
         - normalizePromise: reference/normalizers/protocols/normalize-promise.md
+    - Validators:
+      - Overview: index.md
+      - Primitives:
+        - Overview: index.md
+        - validateString: reference/validators/primitives/validate-string.md
   - Contributing:
     - Overview: contributing/overview.md
     - Development workflow: contributing/development-workflow.md
