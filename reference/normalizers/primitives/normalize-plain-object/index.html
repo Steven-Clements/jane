@@ -23,7 +23,7 @@
     
     
       
-        <title>Normalize plain object - Jane docs</title>
+        <title>normalizePlainObject - Jane docs</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#normalizeplainobject" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Normalize plain object
+              normalizePlainObject
             
           </span>
         </div>
@@ -2260,6 +2265,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2276,9 +2357,82 @@
 
 
 
-  <h1>Normalize plain object</h1>
+<h1 id="normalizeplainobject">normalizePlainObject</h1>
+<p>Normalizes a <strong>plain-object-like value</strong> into a real plain object or returns <code>null</code>.</p>
+<p>This helper accepts objects whose prototype is either <code>Object.prototype</code> or <code>null</code>. It rejects arrays, functions, class instances, and built-in exotic objects. It never throws and never mutates input.</p>
+<p>Use this when you need to ensure that a value is a safe, JSON-like object before further processing or validation.</p>
+<h2 id="signature">Signature</h2>
+<pre><code class="language-ts">function normalizePlainObject(value: unknown): Record&lt;string, unknown&gt; | null
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><code>unknown</code></td>
+<td>The value to normalize into a plain object.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="returns">Returns</h2>
+<p>One of:</p>
+<ul>
+<li>A plain object — if the input is object-like and its prototype is Object.prototype or null.</li>
+<li><code>null</code>: If the value cannot be interpreted as a plain object.</li>
+</ul>
+<h2 id="behavior">Behavior</h2>
+<ul>
+<li><strong>Accepts</strong>:</li>
+<li>Objects whose prototype is exactly <code>Object.prototype</code>.</li>
+<li>Objects created using <code>Object.create(null)</code> (<code>null-prototype</code> objects).</li>
+<li><strong>Rejects</strong>:</li>
+<li>Arrays.</li>
+<li>Functions.</li>
+<li>Class instances.</li>
+<li>Built-in objects: Map, Set, Date, RegExp, Error, etc.</li>
+<li>Objects with custom prototypes.</li>
+<li>Objects whose prototype getter throws.</li>
+<li>All non-object values.</li>
+</ul>
+<p>Uses <code>Reflect.getPrototypeOf</code> safely (wrapped in try/catch).</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-ts">normalizePlainObject({ a: 1 })               
+// { a: 1 }
 
+const obj = Object.create(null)
+obj.x = 1
+normalizePlainObject(obj)                    
+// { x: 1 }
 
+normalizePlainObject([])                     
+// null
+
+normalizePlainObject(new Map())              
+// null
+
+normalizePlainObject(new (class Foo {})())   
+// null
+
+normalizePlainObject(123)                    
+// null
+normalizePlainObject(&quot;abc&quot;)                  
+// null
+normalizePlainObject(null)                   
+// null
+</code></pre>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Use <a href="../normalize-record/">normalizeRecord</a> if you want to enforce that all keys are strings and all values are serializable.</li>
+<li>Use <code>validatePlainObject</code> if you need structured error information instead of returning <code>null</code>.</li>
+<li>Plain objects are useful for JSON-like data structures, but for deep validation consider chaining with <code>validateObjectShape</code>, schemas, or normalizers for nested values.</li>
+</ul>
 
 
 

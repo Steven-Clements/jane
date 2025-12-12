@@ -2325,6 +2325,7 @@ function normalizeIterable&lt;T&gt;(
 <ul>
 <li>Returns iterable values unchanged</li>
 <li>Accepts strings, arrays, sets, maps, typed arrays, generators, and custom iterables</li>
+<li>Functions are not considered iterable, even if they define a <code>Symbol.iterator</code>.</li>
 <li>Rejects non‑iterable values</li>
 <li>Rejects objects whose iterator throws when accessed or invoked</li>
 <li>Never throws and never mutates input</li>
@@ -2348,6 +2349,7 @@ normalizeIterable({ [Symbol.iterator]: () =&gt; { throw new Error(&quot;nope&quo
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
+<li>This helper does not accept async iterables. Use <a href="../normalize-async-iterable/">normalizeAsyncIterable</a> for those.</li>
 <li>This helper is ideal when you want to accept any iterable value but reject everything else.</li>
 <li>It protects against hostile or broken iterator implementations.</li>
 <li>Use <code>validateIterable</code> if you need a <code>Result&lt;T&gt;</code> wrapper instead of <code>null</code>.</li>
