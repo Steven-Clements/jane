@@ -16,7 +16,7 @@
         <link rel="prev" href="../structural/validate-tuple/">
       
       
-        <link rel="next" href="../semantic/">
+        <link rel="next" href="validate-map/">
       
       
         
@@ -4003,6 +4003,146 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateSet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-typed-array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateTypedArray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-weak-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateWeakMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-weak-set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateWeakSet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4367,7 +4507,13 @@
 
 <h1 id="overview">Overview</h1>
 <p>Collection validators verify that iterable structures, such as arrays, sets, and maps, meet specific size constraints, and ensure that their elements or entries conform to consistent type constraints. They return a structured <code>ValidationResult&lt;T&gt;</code>, never throw exceptions, and never mutate the input collection.</p>
-<p>-</p>
+<ul>
+<li><a href="validate-map/">validateMap</a>: Ensures a value is a <code>Map</code> instance (including wrapper objects and subclasses). Useful for validating key–value collections before applying entry‑level checks.</li>
+<li><a href="validate-set/">validateSet</a>: Ensures a value is a <code>Set</code> instance. Ideal for validating unordered collections of unique values prior to element‑level validation.</li>
+<li><a href="validate-typed-array/">validateTypedArray</a>: - Ensures a value is one of the built‑in TypedArray variants (including <code>Int8Array</code>, <code>Float32Array</code>, <code>BigUint64Array</code>, and so on). Useful for validating binary buffers and numeric arrays.</li>
+<li><a href="validate-weak-map/">validateWeakMap</a>: Ensures a value is a <code>WeakMap</code> instance. Suitable for validating object‑keyed mappings used in caches, memoization layers, and ephemeral associations.</li>
+<li><a href="validate-weak-set/">validateWeakSet</a>: Ensures a value is a <code>WeakSet</code> instance. Useful for validating object‑keyed membership sets that rely on weak references.</li>
+</ul>
 <p>All collection validators are pure, predictable, and designed to perform fast checks on the integrity and size of data structures.</p>
 
 
