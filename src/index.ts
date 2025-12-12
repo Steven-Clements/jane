@@ -1,4 +1,4 @@
 export * from './types/index.js';
-export * from './type-guards';
-export * from './normalizers';
-export * from './validators';
+export * from './type-guards/index.js';
+export * from './normalizers/index.js';
+export * from './validators/index.js';

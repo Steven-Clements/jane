@@ -8,6 +8,7 @@
         "emitDeclarationOnly": false,
         "noUncheckedIndexedAccess": true,
         "noImplicitOverride": true,
+        "allowArbitraryExtensions": true,
         "exactOptionalPropertyTypes": true,
         "noPropertyAccessFromIndexSignature": true,
         "useUnknownInCatchVariables": true,
