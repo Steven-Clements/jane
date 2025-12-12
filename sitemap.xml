@@ -321,7 +321,23 @@
          <lastmod>2025-12-12</lastmod>
     </url>
     <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/collections/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
          <loc>https://steven-clements.github.io/jane/reference/validators/primitives/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-big-integer/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-boolean/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-finite-number/</loc>
          <lastmod>2025-12-12</lastmod>
     </url>
     <url>
@@ -349,6 +365,10 @@
          <lastmod>2025-12-12</lastmod>
     </url>
     <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-null/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
          <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-number/</loc>
          <lastmod>2025-12-12</lastmod>
     </url>
@@ -361,7 +381,27 @@
          <lastmod>2025-12-12</lastmod>
     </url>
     <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-safe-integer/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
          <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-string/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/primitives/validate-symbol/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/protocols/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/semantic/</loc>
+         <lastmod>2025-12-12</lastmod>
+    </url>
+    <url>
+         <loc>https://steven-clements.github.io/jane/reference/validators/structural/</loc>
          <lastmod>2025-12-12</lastmod>
     </url>
 </urlset>
