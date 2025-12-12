@@ -14,6 +14,7 @@ Validators are grouped by the kind of value they check for clarity and discovera
 - [Structural](structural/index.md): Validate the shape and internal consistency of objects, records, and tuples.
 - [Collections](collections/index.md): Validate the size, content, and type uniformity of arrays, sets, maps, and iterable structures.
 - [Semantic](semantic/index.md): Validate values with meaning (e.g., date formats, email addresses, URL structure, and so on).
+- [Protocols](protocols/index.md): Validate values that must conform to well‑defined behavioral contracts, such as iterability, comparability, or custom interface‑like capabilities.
 
 Each validator is small, focused, and designed to be combined with others for complex rulesets.
 

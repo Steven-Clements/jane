@@ -14,3 +14,4 @@ export { default as validatePositiveNumber } from './validatePositiveNumber';
 export { default as validateSafeInteger } from './validateSafeInteger';
 export { default as validateString } from './validateString';
 export { default as validateSymbol } from './validateSymbol';
+export { default as validateUndefined } from './validateUndefined';
