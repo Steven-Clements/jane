@@ -1,8 +1,8 @@
-export { default as isDate } from './isDate.js';
-export { default as isEnumValue } from './isEnumValue.js';
-export { default as isError } from './isError.js';
-export { default as isFunction } from './isFunction.js';
-export { default as isJSON } from './isJSON.js';
-export { default as isPort } from './isPort.js';
-export { default as isRegExp } from './isRegExp.js';
-export { default as isTimestamp } from './isTimestamp.js';
+export { default as isDate } from './isDate';
+export { default as isEnumValue } from './isEnumValue';
+export { default as isError } from './isError';
+export { default as isFunction } from './isFunction';
+export { default as isJSON } from './isJSON';
+export { default as isPort } from './isPort';
+export { default as isRegExp } from './isRegExp';
+export { default as isTimestamp } from './isTimestamp';

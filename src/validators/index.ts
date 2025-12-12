@@ -9,4 +9,4 @@ export {
     validatePositiveInteger,
     validatePositiveNumber,
     validateString,
-} from './primitives/index.js';
+} from './primitives/index';

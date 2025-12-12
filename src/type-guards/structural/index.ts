@@ -1,6 +1,6 @@
-export { default as isArray } from './isArray.js';
-export { default as isNonEmptyArray } from './isNonEmptyArray.js';
-export { default as isObject } from './isObject.js';
-export { default as isPlainObject } from './isPlainObject.js';
-export { default as isRecord } from './isRecord.js';
-export { default as isTuple } from './isTuple.js';
+export { default as isArray } from './isArray';
+export { default as isNonEmptyArray } from './isNonEmptyArray';
+export { default as isObject } from './isObject';
+export { default as isPlainObject } from './isPlainObject';
+export { default as isRecord } from './isRecord';
+export { default as isTuple } from './isTuple';

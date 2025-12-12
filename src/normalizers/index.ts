@@ -12,10 +12,10 @@ export {
     normalizePositiveNumber,
     normalizeSafeInteger,
     normalizeString,
-} from './primitives/index.js';
+} from './primitives/index';
 
-export { normalizePlainObject, normalizeRecord } from './structural/index.js';
+export { normalizePlainObject, normalizeRecord } from './structural/index';
 
-export { normalizeJSON, normalizePort, normalizeTimestamp } from './semantic/index.js';
+export { normalizeJSON, normalizePort, normalizeTimestamp } from './semantic/index';
 
-export { normalizeAsyncIterable, normalizeIterable, normalizePromise } from './protocols/index.js';
+export { normalizeAsyncIterable, normalizeIterable, normalizePromise } from './protocols/index';

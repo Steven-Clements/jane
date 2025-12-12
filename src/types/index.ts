@@ -1,2 +1,2 @@
-export * from './NormalizationError.js';
-export * from './ValidationResult.js';
+export * from './NormalizationError';
+export * from './ValidationResult';
