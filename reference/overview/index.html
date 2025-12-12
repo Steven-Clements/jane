@@ -347,10 +347,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#type-guards" class="md-nav__link">
     <span class="md-ellipsis">
       
         Type guards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalizers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validators
       
     </span>
   </a>
@@ -3322,7 +3355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../validators/validate-finite-number.md" class="md-nav__link">
+      <a href="../validators/primitives/validate-finite-number/" class="md-nav__link">
         
   
   
@@ -3707,6 +3740,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validators/primitives/validate-undefined/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateUndefined
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3777,6 +3838,174 @@
     
   
     Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validators/structural/validate-array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateArray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validators/structural/validate-non-empty-array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateNonEmptyArray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validators/structural/validate-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateObject
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validators/structural/validate-plain-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validatePlainObject
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validators/structural/validate-record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateRecord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validators/structural/validate-tuple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateTuple
   
 
     
@@ -4238,10 +4467,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#type-guards" class="md-nav__link">
     <span class="md-ellipsis">
       
         Type guards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalizers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validators
       
     </span>
   </a>
@@ -4288,10 +4550,22 @@
 <li><strong>Pipelines</strong> — Tools like <code>pipe()</code> for composing helpers.</li>
 </ul>
 <p>Each category is intentionally small and focused.</p>
+<h2 id="types">Types</h2>
+<p>Lightweight utility types that describe the shapes, contracts, and result structures used throughout Jane.</p>
+<p>Use these when you need to express normalized forms, validation outcomes, or structural guarantees at the type level without introducing runtime cost.</p>
+<p><a href="../types/">Learn more</a></p>
 <h2 id="type-guards">Type guards</h2>
 <p>Helpers that check types and shapes without throwing.</p>
 <p>Use these when you need safe branching logic or want to narrow unknown input before normalization or validation.</p>
 <p><a href="../type-guards/">Learn more</a></p>
+<h2 id="normalizers">Normalizers</h2>
+<p>Helpers that transform unknown or loosely‑typed input into well‑defined, predictable values.</p>
+<p>Use these when you need to coerce external data into safe internal shapes before validation or business logic. Normalizers never throw and never mutate input; they always return a normalized value or a structured failure.</p>
+<p><a href="../normalizers/">Learn more</a></p>
+<h2 id="validators">Validators</h2>
+<p>Helpers that check whether a value satisfies a specific contract and return a structured <code>ValidationResult&lt;T&gt;</code>.</p>
+<p>Use these when you need explicit success/failure reporting, detailed error messages, or when validating nested data structures. Validators never throw and never mutate input, making them ideal for user‑facing or API‑facing validation flows.</p>
+<p><a href="../validators/">Learn more</a></p>
 <h2 id="how-to-read-this-section">How to read this section</h2>
 <p>Every helper is documented with the same predictable structure:</p>
 <ul>

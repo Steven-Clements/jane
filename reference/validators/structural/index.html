@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://steven-clements.github.io/jane/reference/validators/structural/">
       
       
-        <link rel="prev" href="../primitives/validate-symbol/">
+        <link rel="prev" href="../primitives/validate-undefined/">
       
       
-        <link rel="next" href="../collections/">
+        <link rel="next" href="validate-array/">
       
       
         
@@ -3244,7 +3244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../validate-finite-number.md" class="md-nav__link">
+      <a href="../primitives/validate-finite-number/" class="md-nav__link">
         
   
   
@@ -3629,6 +3629,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primitives/validate-undefined/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateUndefined
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3719,6 +3747,174 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateArray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-non-empty-array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateNonEmptyArray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateObject
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-plain-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validatePlainObject
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateRecord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-tuple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateTuple
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -4171,7 +4367,14 @@
 
 <h1 id="overview">Overview</h1>
 <p>Structural validators check whether an object, record, or tuple conforms to a specific shape, ensuring all required properties exist and meet their type constraints. They return a structured <code>ValidationResult&lt;T&gt;</code>, never throw exceptions, and never mutate the input object.</p>
-<p>-</p>
+<ul>
+<li><a href="validate-array/">validateArray</a>: Ensures a value is an array (Array.isArray), rejecting objects, functions, and primitives.</li>
+<li><a href="validate-non-empty-array/">validateNonEmptyArray</a>: Ensures a value is an array with at least one element, rejecting empty arrays and non-arrays.</li>
+<li><a href="validate-object/">validateObject</a>: Ensures a value is a non‑null object, accepting all object types except arrays and functions.</li>
+<li><a href="validate-plain-object/">validatePlainObject</a>: Ensures a value is a plain object whose prototype is exactly <code>Object.prototype</code>.</li>
+<li><a href="validate-record/">validateRecord</a>: Ensures a value is a non‑null, non‑array object whose own keys are strings, regardless of prototype.</li>
+<li><a href="validate-tuple/">validateTuple</a>: Ensures a value is an array of fixed length where each element satisfies a corresponding guard.</li>
+</ul>
 <p>All structural validators are pure, predictable, and designed to compose efficiently, allowing you to validate complex nested data schemas without boilerplate.</p>
 
 
