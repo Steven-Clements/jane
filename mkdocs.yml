@@ -124,7 +124,7 @@ nav:
       - Semantic:
         - Overview: reference/validators/semantic/index.md
       - Protocols:
-        -Overview: reference/validators/protocols/index.md
+        - Overview: reference/validators/protocols/index.md
   - Contributing:
     - Overview: contributing/overview.md
     - Development workflow: contributing/development-workflow.md
