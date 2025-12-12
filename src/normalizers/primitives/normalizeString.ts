@@ -2,8 +2,11 @@
  * Normalizes a value into a trimmed string or returns null.
  *
  * This helper accepts only native strings. The returned string is trimmed
- * to remove leading and trailing whitespace. All other values return null.
- * This function never throws and never mutates input.
+ * to remove leading and trailing whitespace. Empty strings (after trimming)
+ * are considered valid normalized values and are returned as-is. All other
+ * values return null. This function never throws and never mutates input.
+ *
+ * Use `normalizeNonEmptyString` if you need to reject empty strings.
  */
 export default function normalizeString(value: unknown): string | null {
     // Fast path: only native strings are accepted

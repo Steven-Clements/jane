@@ -12,7 +12,7 @@ function normalizeBoolean(value: unknown): boolean | null
 
 ## Parameters
 
-| Name | Date type | Description |
+| Name | Data type | Description |
 |---|---|---|
 | value | `unknown` | The value to normalize into a boolean. |
 

@@ -16,7 +16,7 @@ function normalizeFiniteNumber(value: unknown): number | null
 |---|---|---|
 | value | `unknown` | The value to normalize into a finite number. |
 
-Returns
+## Returns
 
 One of:
 

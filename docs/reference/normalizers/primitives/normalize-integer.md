@@ -26,6 +26,7 @@ One of:
 ## Behavior
 
 - Accepts finite native integers.
+- Scientific notation is allowed when it normalizes to an integer.
 - Accepts integer strings (trimmed before parsing).
 - Rejects:
   - Floats.

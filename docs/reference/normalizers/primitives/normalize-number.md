@@ -56,5 +56,6 @@ normalizeNumber(null)          // null
 
 ## Notes
 
+- Supports scientific notation.
 - Use [normalizeInteger](normalize-integer.md) or `normalizeSafeInteger` for stricter numeric domains.
 - Use `validateNumber` if you need a `Result<T>` instead of `null`.

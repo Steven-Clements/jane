@@ -15,6 +15,7 @@ function normalizeIterable<T>(
 
 - Returns iterable values unchanged
 - Accepts strings, arrays, sets, maps, typed arrays, generators, and custom iterables
+- Functions are not considered iterable, even if they define a `Symbol.iterator`.
 - Rejects non‑iterable values
 - Rejects objects whose iterator throws when accessed or invoked
 - Never throws and never mutates input
@@ -40,6 +41,7 @@ normalizeIterable({ [Symbol.iterator]: () => { throw new Error("nope") } })
 
 ## Notes
 
+- This helper does not accept async iterables. Use [normalizeAsyncIterable](normalize-async-iterable.md) for those.
 - This helper is ideal when you want to accept any iterable value but reject everything else.
 - It protects against hostile or broken iterator implementations.
 - Use `validateIterable` if you need a `Result<T>` wrapper instead of `null`.

@@ -53,8 +53,10 @@ normalizeString({})               // null
 
 ## Notes
 
-- This helper is intentionally minimal: it only trims.
-- Use [normalizeNonEmptyString](normalize-non-empty-string.md) when empty strings should be rejected.
+- Empty strings are **valid** normalized values and are never converted to `null`.
+- This intentional behavior distinguishes `normalizeString` from `normalizeNonEmptyString`.
+- Use [normalizeNonEmptyString](normalize-non-empty-string.md) if you need to reject empty results.
+- This helper is ideal for optional or flexible string fields.
 - Use `validateString` if you need a `Result<T>` instead of `null`.
 
 ## Next up

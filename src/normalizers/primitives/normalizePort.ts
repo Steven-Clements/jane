@@ -1,18 +1,17 @@
 /**
  * Normalizes a port-like value into a valid TCP port number or null.
  *
- * Non‑strict mode (default):
- * - Accepts integer ports from zero through sixty five thousand five hundred thirty five
- * - Accepts strings that represent those integers
+ * Non-strict mode (default):
+ * - Accepts integer ports from 0 through 65535
+ * - Accepts strings representing those integers (whitespace allowed)
  *
  * Strict mode:
- * - Accepts integer ports from one through sixty five thousand five hundred thirty five
- * - Accepts only digit‑only strings with no whitespace and no leading zeros
+ * - Accepts integer ports from 1 through 65535
+ * - Accepts only digit-only strings with no whitespace and no leading zeros
  *
  * Behavior:
  * - Never mutates input and never throws
- * - Rejects negative numbers, non‑finite numbers, and numbers above the valid range
- * - Rejects strings that do not represent a valid integer port
+ * - Rejects negative numbers, non-finite numbers, and numbers above the valid range
  * - Returns null for all unsupported or invalid values
  */
 export default function normalizePort(
@@ -24,48 +23,27 @@ export default function normalizePort(
     // Number path
     if (typeof value === 'number') {
         if (!Number.isInteger(value)) return null;
-
-        if (strict) {
-            if (value >= 1 && value <= 65535) return value;
-            return null;
-        }
-
-        if (value >= 0 && value <= 65535) return value;
-        return null;
+        if (strict) return value >= 1 && value <= 65535 ? value : null;
+        return value >= 0 && value <= 65535 ? value : null;
     }
 
     // String path
     if (typeof value === 'string') {
+        if (strict) {
+            // Strict: no whitespace, no leading zeros, only digits
+            if (!/^[1-9]\d*$/.test(value)) return null;
+            const parsed = Number(value);
+            return parsed >= 1 && parsed <= 65535 ? parsed : null;
+        }
+
+        // Non-strict: trim, parse integer, allow zero
         const trimmed = value.trim();
         if (trimmed === '') return null;
-
-        // Strict mode: no whitespace, no leading zeros unless the value is exactly zero
-        if (strict) {
-            // Strict mode: no whitespace, no leading zeros, digits only
-            if (!/^[1-9]\d*$/.test(value)) {
-                return null;
-            }
-
-            const parsed = Number(value);
-            if (parsed >= 1 && parsed <= 65535) {
-                return parsed;
-            }
-
-            return null;
-        }
-
         const parsed = Number(trimmed);
         if (!Number.isInteger(parsed)) return null;
-
-        if (strict) {
-            if (parsed >= 1 && parsed <= 65535) return parsed;
-            return null;
-        }
-
-        if (parsed >= 0 && parsed <= 65535) return parsed;
-        return null;
+        return parsed >= 0 && parsed <= 65535 ? parsed : null;
     }
 
-    // Everything else is unsupported
+    // Unsupported types
     return null;
 }
