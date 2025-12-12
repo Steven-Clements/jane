@@ -4,6 +4,9 @@ site_url: 'https://steven-clements.github.io/jane'
 
 theme: material
 
+plugins:
+  - search
+
 nav:
   - Meet Jane: index.md
   - Reference:
@@ -83,7 +86,7 @@ nav:
       - Structural:
         - Overview: reference/normalizers/structural/index.md
         - normalizePlainObject: reference/normalizers/structural/normalize-plain-object.md
-        - normalizeRecord: reference/normalizers/structural/normalize-record.md        
+        - normalizeRecord: reference/normalizers/structural/normalize-record.md
       - Semantic:
         - Overview: reference/normalizers/semantic/index.md
         - normalizeJSON: reference/normalizers/semantic/normalize-json.md
@@ -103,7 +106,7 @@ nav:
         - validateNegativeNumber: reference/validators/primitives/validate-negative-number.md
         - validateNonEmptyString: reference/validators/primitives/validate-non-empty-string.md
         - validateNonNegativeInteger: reference/validators/primitives/validate-non-negative-integer.md
-        - validateNonNegativeInteger: reference/validators/primitives/validate-non-negative-number.md
+        - validateNonNegativeNumber: reference/validators/primitives/validate-non-negative-number.md
         - validateNumber: reference/validators/primitives/validate-number.md
         - validatePositiveInteger: reference/validators/primitives/validate-positive-integer.md
         - validatePositiveNumber: reference/validators/primitives/validate-positive-number.md
