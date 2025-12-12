@@ -9,9 +9,9 @@ Normalizers in Jane are pure, explicit, and side‑effect‑free. They make down
 Normalizers are grouped by category for clarity and discoverability:
 
 - [Primitives](primitives/index.md): Trim, canonicalize, or safely interpret primitive values.
-<!-- - [Structural](structural/index.md): Normalize objects, records, and tuples into predictable shapes.
+- [Structural](structural/index.md): Normalize objects, records, and tuples into predictable shapes.
 - [Collections](collections/index.md): Normalize arrays, sets, maps, and iterable structures.
-- [Semantic](semantic/index.md): Normalize values with meaning (dates, ports, JSON, and so on). -->
+- [Semantic](semantic/index.md): Normalize values with meaning (dates, ports, JSON, and so on).
 
 Each normalizer is small, focused, and designed to be composed with others.
 
