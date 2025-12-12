@@ -1,3 +1,3 @@
-import type NormalizationError from './normalizationError';
-
-export type ValidationResult<T> = { ok: true; value: T } | { ok: false; error: NormalizationError };
+export type ValidationResult<T> =
+    | { ok: true; value: T }
+    | { ok: false; field: string; message: string };

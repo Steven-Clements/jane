@@ -13,18 +13,11 @@ export {
     isString,
     isSymbol,
     isUndefined,
-} from './primitives/index.js';
+} from './primitives';
 
-export {
-    isArray,
-    isNonEmptyArray,
-    isObject,
-    isPlainObject,
-    isRecord,
-    isTuple,
-} from './structural/index.js';
+export { isArray, isNonEmptyArray, isObject, isPlainObject, isRecord, isTuple } from './structural';
 
-export { isMap, isSet, isTypedArray, isWeakMap, isWeakSet } from './collections/index.js';
+export { isMap, isSet, isTypedArray, isWeakMap, isWeakSet } from './collections';
 
 export {
     isDate,
@@ -35,6 +28,6 @@ export {
     isPort,
     isRegExp,
     isTimestamp,
-} from './semantic/index.js';
+} from './semantic';
 
-export { isAsyncIterable, isIterable, isPromise } from './protocols/index.js';
+export { isAsyncIterable, isIterable, isPromise } from './protocols';

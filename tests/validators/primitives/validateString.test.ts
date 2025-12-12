@@ -2,32 +2,52 @@ import { describe, it, expect } from 'vitest';
 import validateString from '../../../src/validators/primitives/validateString.js';
 
 describe('validateString', () => {
-    it('accepts valid strings', () => {
-        const result = validateString('hello');
-        expect(result).toEqual({ ok: true, value: 'hello' });
+    it('returns ok for primitive strings', () => {
+        expect(validateString('hello', 'name')).toEqual({ ok: true, value: 'hello' });
+        expect(validateString('', 'empty')).toEqual({ ok: true, value: '' });
+        expect(validateString(' ', 'space')).toEqual({ ok: true, value: ' ' });
     });
 
-    it('rejects non-strings', () => {
-        const result = validateString(123);
-        expect(result.ok).toBe(false);
-        if (!result.ok) {
-            expect(result.error.kind).toBe('invalid_string');
-            expect(result.error.input).toBe(123);
-        }
-    });
-
-    it('rejects null and undefined', () => {
-        expect(validateString(null).ok).toBe(false);
-        expect(validateString(undefined).ok).toBe(false);
-    });
-
-    it('rejects objects and arrays', () => {
-        expect(validateString({}).ok).toBe(false);
-        expect(validateString([]).ok).toBe(false);
-    });
-
-    it('rejects booleans and symbols', () => {
-        expect(validateString(true).ok).toBe(false);
-        expect(validateString(Symbol('x')).ok).toBe(false);
+    it('returns error for non-strings', () => {
+        expect(validateString(123, 'age')).toEqual({
+            ok: false,
+            field: 'age',
+            message: 'Value must be a string',
+        });
+        expect(validateString(true, 'flag')).toEqual({
+            ok: false,
+            field: 'flag',
+            message: 'Value must be a string',
+        });
+        expect(validateString(null, 'missing')).toEqual({
+            ok: false,
+            field: 'missing',
+            message: 'Value must be a string',
+        });
+        expect(validateString(undefined, 'undef')).toEqual({
+            ok: false,
+            field: 'undef',
+            message: 'Value must be a string',
+        });
+        expect(validateString({}, 'obj')).toEqual({
+            ok: false,
+            field: 'obj',
+            message: 'Value must be a string',
+        });
+        expect(validateString([], 'arr')).toEqual({
+            ok: false,
+            field: 'arr',
+            message: 'Value must be a string',
+        });
+        expect(validateString(Symbol('s'), 'sym')).toEqual({
+            ok: false,
+            field: 'sym',
+            message: 'Value must be a string',
+        });
+        expect(validateString(new String('hello'), 'boxed')).toEqual({
+            ok: false,
+            field: 'boxed',
+            message: 'Value must be a string',
+        });
     });
 });

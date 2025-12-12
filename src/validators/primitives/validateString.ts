@@ -1,39 +1,25 @@
-import normalizeString from '../../normalizers/primitives/normalizeString';
-
-export interface NormalizationError {
-    kind: 'invalid_string';
-    message: string;
-    input: unknown;
-}
-
-export type ValidationResult<T> = { ok: true; value: T } | { ok: false; error: NormalizationError };
+import { isString } from '../../type-guards';
+import type { ValidationResult } from '../../types';
 
 /**
- * Validates that a value is a string.
+ * Validates that a value is a primitive string.
  *
- * Behavior:
- * - Delegates to normalizeString
- * - Returns { ok: true, value } when normalization succeeds
- * - Returns { ok: false, error } when normalization fails
- * - Never throws
- * - Never mutates input
+ * This helper never throws and never mutates input. It performs a strict
+ * `typeof` check using the `isString` type guard. Only primitive strings
+ * pass. All other values return a structured validation error.
+ *
+ * @param value - The value to validate.
+ * @param field - The name of the field being validated, for error reporting.
+ * @returns ValidationResult<string> - ok with the string value, or an error object.
  */
-export default function validateString(value: unknown): ValidationResult<string> {
-    const normalized = normalizeString(value);
-
-    if (normalized === null) {
+export default function validateString(value: unknown, field: string): ValidationResult<string> {
+    if (!isString(value)) {
         return {
             ok: false,
-            error: {
-                kind: 'invalid_string',
-                message: 'Value is not a valid string',
-                input: value,
-            },
+            field,
+            message: 'Value must be a string',
         };
     }
 
-    return {
-        ok: true,
-        value: normalized,
-    };
+    return { ok: true, value };
 }
