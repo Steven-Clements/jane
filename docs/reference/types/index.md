@@ -8,6 +8,7 @@ Jane’s utility types enforce non-nullability where possible and focus on clear
 
 These are the essential TypeScript types used to define and communicate predictable data states:
 
+- [JSONValue](./json-value.md): JSONValue is the standard type representing all valid JSON data in Jane.
 - [ValidationResult](./validation-result.md): The mandatory return type for all **Validator** functions. It is a discriminated union that enforces a clear success or failure contract.
 
 ## When to Refer to Type Definitions
