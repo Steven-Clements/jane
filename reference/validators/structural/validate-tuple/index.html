@@ -5044,14 +5044,14 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>value</td>
 <td><code>unknown</code></td>
 <td>The value to validate. Must be an array of the same length as <code>guards</code>.</td>
 </tr>
 <tr>
-<td></td>
-<td><code>readonly GuardFn[]</code></td>
-<td>One guard per tuple position. Each guard must accept <code>unknown</code> and return a boolean or type predicate.</td>
+<td>guards</td>
+<td><code>readonly ((value: unknown) =&gt; boolean)[]</code></td>
+<td>One guard per tuple position.</td>
 </tr>
 <tr>
 <td>field</td>
@@ -5068,7 +5068,7 @@
 </ul>
 <h2 id="behavior">Behavior</h2>
 <ul>
-<li>Uses <a href="./">isTuple</a> internally.</li>
+<li>Uses <a href="../../../type-guards/structural/is-tuple/">isTuple</a> internally.</li>
 <li>Value must be an array.</li>
 <li>Array length must match the number of guards.</li>
 <li>Each element must satisfy its corresponding guard.</li>

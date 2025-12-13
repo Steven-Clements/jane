@@ -5019,15 +5019,21 @@
 
 
 <h1 id="validateobject">validateObject</h1>
-<p>Checks whether a value is a <strong>non-null object</strong>. This helper uses the
-<a href="../../../type-guards/structural/is-object/">isObject</a> type guard internally.
-A value passes this check only if it is an object in the JavaScript sense
-(<code>typeof value === "object"</code>) and is not <code>null</code>, an array, a function, or a
-specialized object such as <code>Map</code>, <code>Set</code>, or <code>Date</code>.</p>
-<p>It never throws and never mutates input. Use it when you need to ensure that a
-value is a general-purpose object before applying further structural validation.</p>
+<p>Checks whether a value is a non-null object in the JavaScript sense. This helper uses the <a href="../../../type-guards/structural/is-object/">isObject</a> type guard internally.</p>
+<p>A value passes this check if it is an object and <em>not</em> one of the following:</p>
+<ul>
+<li><code>null</code>.</li>
+<li>An array.</li>
+<li>A function.</li>
+<li>A primitive value.</li>
+<li>Built-in objects such as <code>Map</code>, <code>Set</code>, <code>Date</code>, and class instances are accepted.</li>
+</ul>
+<p>It never throws and never mutates input. Use it when you need to ensure that a value is some kind of object before applying more specific structural validation.</p>
 <h2 id="signature">Signature</h2>
-<pre><code class="language-ts">function validateObject(value: unknown, field: string): ValidationResult&lt;object&gt;
+<pre><code class="language-ts">function validateObject(
+  value: unknown,
+  field: string
+): ValidationResult&lt;object&gt;
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <table>
@@ -5054,19 +5060,35 @@ value is a general-purpose object before applying further structural validation.
 <h2 id="returns">Returns</h2>
 <p>One of:</p>
 <ul>
-<li><code>{ ok: true, value: object }</code>: If value is a non-null object.</li>
-<li><code>{ ok: false, field: string, message: string }</code>: If value is not a valid object.</li>
+<li><code>{ ok: true, value: object }</code>: If the value is a non-null object (excluding arrays and functions).</li>
+<li><code>{ ok: false, field: string, message: string }</code>: If the value is not a valid object.</li>
 </ul>
 <h2 id="behavior">Behavior</h2>
 <ul>
 <li>Uses <a href="../../../type-guards/structural/is-object/">isObject</a> internally.</li>
-<li>Only non-null objects pass.</li>
-<li>Primitives, arrays, and functions fail.</li>
+<li><strong>Accepts any non-null object, including</strong>:</li>
+<li>Plain objects</li>
+<li><code>Map</code></li>
+<li><code>Set</code></li>
+<li><code>Date</code></li>
+<li>Class instances</li>
+<li><strong>Rejects</strong>:</li>
+<li><code>null</code></li>
+<li>Arrays</li>
+<li>Functions</li>
+<li>All primitive values</li>
+<li>Performs no coercion.</li>
 <li>Never throws or mutates input.</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <pre><code class="language-ts">validateObject({ a: 1 }, &quot;data&quot;)
 // { ok: true, value: { a: 1 } }
+
+validateObject(new Map(), &quot;map&quot;)
+// { ok: true, value: Map(0) {} }
+
+validateObject(new Date(), &quot;date&quot;)
+// { ok: true, value: 2025-01-01T00:00:00.000Z }
 
 validateObject([], &quot;arr&quot;)
 // { ok: false, field: &quot;arr&quot;, message: &quot;Value must be an object&quot; }
@@ -5074,14 +5096,16 @@ validateObject([], &quot;arr&quot;)
 validateObject(null, &quot;nothing&quot;)
 // { ok: false, field: &quot;nothing&quot;, message: &quot;Value must be an object&quot; }
 
-validateObject(new Map(), &quot;map&quot;)
-// { ok: false, field: &quot;map&quot;, message: &quot;Value must be an object&quot; }
+validateObject(() =&gt; {}, &quot;fn&quot;)
+// { ok: false, field: &quot;fn&quot;, message: &quot;Value must be an object&quot; }
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>This validator does not check for plain objects. For that, use <a href="../validate-plain-object/">validatePlainObject</a>.</li>
-<li>Suitable for validating general-purpose object inputs before applying more specific structural checks.</li>
-<li>The validator never throws and never mutates input. All error reporting goes through structured <code>ValidationResult</code> objects.</li>
+<li>This validator does not check for plain objects.</li>
+<li>If you need to reject <code>Map</code>, <code>Set</code>, <code>Date</code>, or class instances, use a stricter validator such as <a href="../validate-plain-object/">validatePlainObject</a>.</li>
+<li>This validator is intentionally broad and is useful as a first-pass structural guard.</li>
+<li>All error reporting is handled through structured <code>ValidationResult</code> objects.</li>
+<li>The validator never throws and never mutates input.</li>
 </ul>
 
 

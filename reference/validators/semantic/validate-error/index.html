@@ -5056,7 +5056,7 @@
 <p>-Accepts <code>Error</code> objects and all subclasses.
 -Rejects primitives, objects, arrays, and non-Error values.
 -Performs no coercion.
--Never throws mutates input.</p>
+-Never throws and never mutates input.</p>
 <h2 id="examples">Examples</h2>
 <pre><code class="language-ts">validateError(new Error(&quot;oops&quot;), &quot;err&quot;)
 // { ok: true, value: Error(&quot;oops&quot;) }

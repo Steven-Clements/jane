@@ -5019,8 +5019,8 @@
 
 
 <h1 id="validatenonemptystring">validateNonEmptyString</h1>
-<p>Checks whether a value is a <strong>non‑empty string</strong>. This helper performs a strict string check using isNonEmptyString and ensures the string has length &gt; 0. Whitespace and zero-width characters count as non-empty.</p>
-<p>It never throws and never mutates input. Use it when you need a string with meaningful content before running normalization or further validation.</p>
+<p>Validates that a value is a <strong>non-empty string with meaningful content</strong>.</p>
+<p>This helper trims leading and trailing whitespace and rejects strings that are empty after trimming. Zero-width characters (<code>\u200B</code>) are treated as empty. Non-string values are also rejected.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function validateNonEmptyString(value: unknown, field: string): ValidationResult&lt;string&gt;
 </code></pre>
@@ -5078,7 +5078,6 @@ validateNonEmptyString(123, &quot;age&quot;)
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Use <a href="./">validateNonEmptyString</a> when a string with meaningful content is required.</li>
-<li>Combine with <a href="../../../normalizers/primitives/normalize-string/">normalizeString</a> if trimming or other normalization is desired before validation.</li>
 </ul>
 
 

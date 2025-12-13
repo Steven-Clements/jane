@@ -5071,11 +5071,11 @@
 validateRecord({}, &quot;empty&quot;)
 // { ok: true, value: {} }
 
+validateRecord(Object.create(null), &quot;nullProto&quot;)
+// { ok: true, value: {} }
+
 validateRecord([], &quot;arr&quot;)
 // { ok: false, field: &quot;arr&quot;, message: &quot;Value must be a record&quot; }
-
-validateRecord(Object.create(null), &quot;nullProto&quot;)
-// { ok: false, field: &quot;nullProto&quot;, message: &quot;Value must be a record&quot; }
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>

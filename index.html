@@ -269,6 +269,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-makes-jane-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What makes Jane different?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#who-is-jane-for" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -280,10 +291,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-tiny-example" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A tiny example
+        Installation
       
     </span>
   </a>
@@ -291,10 +302,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Quick start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-and-error-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result and error shapes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-validating-request-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Validating request input
       
     </span>
   </a>
@@ -4939,6 +4972,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-makes-jane-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What makes Jane different?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#who-is-jane-for" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4950,10 +4994,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-tiny-example" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A tiny example
+        Installation
       
     </span>
   </a>
@@ -4961,10 +5005,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Quick start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-and-error-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result and error shapes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-validating-request-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Validating request input
       
     </span>
   </a>
@@ -5011,70 +5077,122 @@
 
 
 <h1 id="meet-jane">Meet Jane</h1>
-<p><strong>Less boilerplate. More workflow.</strong></p>
 <blockquote>
-<p>Zero‑side‑effect helpers for predictable data sanity.</p>
+<p><strong>Less boilerplate. More workflow.</strong></p>
 </blockquote>
-<hr />
-<p>Jane is a small, clarity‑first helper library for <em>normalizing</em>, <em>validating</em>, and <em>safely parsing</em> unknown input in JavaScript and TypeScript.</p>
-<p>It’s built for developers who want predictable behavior, composable pipelines, and zero surprises — without schema systems, decorators, or framework lock‑in.</p>
-<ul>
-<li>Jane is not a schema builder.</li>
-<li>Jane is not a type generator.</li>
-<li>Jane is not a runtime type system.</li>
-</ul>
+<p>Zero‑side‑effect normalization, validation, and safe parsing for JavaScript and TypeScript.</p>
+<p>Jane is a clarity‑first helper library for turning unknown input into predictable, typed values — without schema systems, decorators, or framework lock‑in. It gives you the small, explicit building blocks you wish the language shipped with.</p>
 <p>Jane is intentionally small. Intentionally explicit. Intentionally boring in all the right ways.</p>
-<hr />
 <h2 id="why-jane">Why Jane?</h2>
-<p>Most validation libraries try to be everything: schema builders, type generators, transformers, parsers, refiners, and runtime type systems.</p>
+<p>Most validation libraries try to do everything: schemas, inference, coercion, transformations, refinements, and runtime type systems.</p>
 <p>Jane takes the opposite approach.</p>
 <p>Jane is:</p>
 <ul>
-<li><strong>Pure</strong>: No side effects, no hidden mutations.</li>
+<li><strong>Pure</strong>: No side effects, no hidden mutations, no surprises.</li>
 <li><strong>Deterministic</strong>: Same input, same output, every time.</li>
-<li><strong>Composable</strong>: Build pipelines with <code>pipe()</code>.</li>
-<li><strong>Zero‑dependency</strong>: No runtime weight.</li>
-<li><strong>Framework‑agnostic</strong>: Works in Node, serverless, workers, Express, Fastify, Bun, Deno.</li>
-<li><strong>Focused</strong>: Normalization → validation → result.</li>
+<li><strong>Composable</strong>: Build safe pipelines with <code>pipe()</code>, <code>compose()</code>, and <code>tap()</code>.</li>
+<li><strong>Zero‑dependency</strong>: No runtime weight, no bloat.</li>
+<li><strong>Framework‑agnostic</strong>: Works anywhere: Node, serverless, workers, Express, Fastify, Bun, Deno.</li>
+<li><strong>TypeScript‑aligned</strong>: Every helper narrows types cleanly and predictably.</li>
+<li><strong>Focused</strong>: Normalize → validate → parse → result. Nothing more. Nothing hidden.</li>
 </ul>
-<p>If you want a dependable "standard library" for data sanity, Jane is your girl.</p>
-<hr />
+<p>If you want a dependable “standard library for runtime safety,” Jane is your girl.</p>
+<h2 id="what-makes-jane-different">What makes Jane different?</h2>
+<p>Jane isn’t a schema engine. It isn’t a DSL. It isn’t magic.</p>
+<p>Jane gives you:</p>
+<ul>
+<li><strong>Primitives, not frameworks</strong>: Small, explicit helpers you can compose however you want.</li>
+<li><strong>Zero coercion</strong>: If you pass <code>"123"</code> to a number validator, you get a failure — not a silent conversion.</li>
+<li><strong>Safe parsing</strong>: Every parser returns a structured result. Nothing throws.</li>
+<li><strong>A complete lattice of runtime checks</strong>: Type guards → validators → normalizers → parsers → functional helpers.</li>
+<li><strong>Perfect for TypeScript</strong>: Jane’s helpers narrow types exactly the way TS expects. No inference tricks. No decorators. No metadata.</li>
+<li><strong>Predictable control flow</strong>: Every operation returns a <code>ValidationResult&lt;T&gt;</code>.</li>
+</ul>
+<p>You always know what you’re getting.</p>
 <h2 id="who-is-jane-for">Who is Jane for?</h2>
 <p>Jane is designed for developers who:</p>
 <ul>
-<li>Prefer <em>explicit, predictable behavior</em> over magic.</li>
-<li>Want <em>pure functions</em> instead of schema DSLs.</li>
-<li>Need <em>safe parsing</em> for config, requests, queries, and internal boundaries.</li>
-<li>Value <em>clarity and maintainability</em> in long‑lived codebases.</li>
-<li>Dislike validators that throw.</li>
-<li>Want <em>small, composable building blocks</em> instead of monolithic schemas.</li>
+<li>Prefer explicit, predictable behavior over clever abstractions.</li>
+<li>Want pure functions instead of schema builders.</li>
+<li>Need safe parsing for config, requests, environment variables, and API boundaries.</li>
+<li>Value clarity and maintainability in long‑lived codebases.</li>
+<li>Dislike validators that throw or coerce.</li>
+<li>Want small, composable building blocks instead of monolithic schemas.</li>
 </ul>
 <p>If you’ve ever written your own tiny normalizers and validators because existing libraries felt too heavy — Jane was built for you.</p>
-<h2 id="a-tiny-example">A tiny example</h2>
+<h2 id="installation">Installation</h2>
+<pre><code class="language-ts">npm install @clementine-solutions/jane
+</code></pre>
+<h2 id="quick-start">Quick start</h2>
 <pre><code class="language-ts">import {
-    normalizeString,
-    validateNumber,
-    pipe
-} from &quot;@steven-clements/jane&quot;;
+    pipe,
+    normalizeInteger,
+    validateInteger,
+    normalizeEnum,
+    validateEnum,
+} from &quot;@clementine-solutions/jane&quot;;
 
-const parsePort = pipe(
-  normalizeString,
-  validateNumber,
+const port = pipe(
+    process.env.PORT,
+    normalizeInteger,
+    (value) =&gt; validateInteger(value, &quot;PORT&quot;),
 );
 
-parsePort(&quot;3000&quot;); // { ok: true, value: 3000 }
-parsePort(&quot;abc&quot;);  // { ok: false, error: ... }
+const logLevel = pipe(
+    process.env.LOG_LEVEL,
+    (value) =&gt; normalizeEnum(value, [&quot;debug&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;]),
+    (value) =&gt; validateEnum(value, [&quot;debug&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;], &quot;LOG_LEVEL&quot;),
+);
 </code></pre>
-<p>Jane stays out of your way. No schemas. No decorators. No magic.</p>
-<h2 id="installation">Installation</h2>
-<pre><code class="language-bash">npm install @steven-clements/jane
+<p>Jane encourages a simple, predictable flow:</p>
+<ul>
+<li>Normalize unknown input.</li>
+<li>Validate the normalized value.</li>
+<li>Return a <code>Result&lt;T&gt;</code> — never throw.</li>
+</ul>
+<h2 id="result-and-error-shapes">Result and error shapes</h2>
+<p>Jane never throws.</p>
+<p>Every validator returns a discriminated union:</p>
+<pre><code class="language-ts">type SafeResult&lt;T&gt; =
+  | { ok: true; value: T }
+  | { ok: false; error: string };
 </code></pre>
+<p>Validators that operate on named fields return:</p>
+<pre><code class="language-ts">type ValidationResult&lt;T&gt; =
+  | { ok: true; value: T }
+  | { ok: false; field: string; message: string };
+</code></pre>
+<p>These shapes are intentionally minimal:</p>
+<ul>
+<li>Easy to test</li>
+<li>Easy to log</li>
+<li>Easy to compose</li>
+<li>Impossible to misuse</li>
+</ul>
+<h2 id="example-validating-request-input">Example: Validating request input</h2>
+<pre><code class="language-ts">const validated = {
+    name: pipe(body.name, normalizeString, (v) =&gt; validateNonEmptyString(v, &quot;name&quot;)),
+    age: pipe(body.age, normalizeInteger, (v) =&gt; validateInteger(v, &quot;age&quot;)),
+    newsletter: pipe(body.newsletter, normalizeBoolean),
+};
+</code></pre>
+<p>Every field becomes a <code>Result&lt;T&gt;</code>.</p>
+<ul>
+<li>No exceptions.</li>
+<li>No coercion surprises.</li>
+<li>No hidden behavior.</li>
+</ul>
 <h2 id="documentation">Documentation</h2>
 <p>Explore our comprehensive documentation:</p>
 <ul>
 <li><a href="reference/overview/">Reference</a></li>
 <li><a href="contributing/overview/">Contributing</a></li>
 </ul>
+<pre><code class="language-bash">npm run format
+npm run test
+npm run lint
+npm run typecheck
+</code></pre>
 <h2 id="license">License</h2>
 <p>Jane is licensed under the Apache License, Version 2.0.</p>
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>

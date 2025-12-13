@@ -5042,7 +5042,7 @@ validateNegativeInteger(&quot;5&quot;, 'stringVal'); // → { ok: false, field: 
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Only integer number primitives greater than zero are valid.</li>
+<li>Only integer number primitives less than zero are valid.</li>
 <li>Fractional numbers, zero, positive numbers, strings, <code>NaN</code>, <code>Infinity</code>, and non-numeric types fail.</li>
 </ul>
 <p>Use <a href="../../../normalizers/primitives/normalize-negative-integer/">normalizeNegativeInteger</a> if input may be a string before validation.</p>

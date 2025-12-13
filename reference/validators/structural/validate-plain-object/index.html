@@ -5019,8 +5019,10 @@
 
 
 <h1 id="validateplainobject">validatePlainObject</h1>
-<p>Checks whether a value is a <strong>plain object</strong>. This helper uses the <a href="../../../type-guards/structural/is-plain-object/">isPlainObject</a> type guard internally. A plain object is one created with <code>{}</code> or <code>new Object()</code>, where the prototype is exactly <code>Object.prototype</code>.</p>
-<p>It never throws and never mutates input. Use it when you need to ensure that a value is a simple, prototype‑standard object before applying further structural validation.</p>
+<p>Checks whether a value is a <strong>plain object</strong>. This helper uses the <a href="../../../type-guards/structural/is-plain-object/">isPlainObject</a> type guard internally.</p>
+<p>A plain object is one created via an object literal (<code>{}</code>) or <code>new Object()</code>, where the prototype is <strong>exactly <code>Object.prototype</code></strong>.</p>
+<p>Objects with a <code>null</code> prototype, custom prototypes, or specialized built-in types do not pass this check.</p>
+<p>It never throws and never mutates input. Use it when you need to ensure that a value is a simple, prototype-standard object before applying further structural or key-level validation.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function validatePlainObject(
   value: unknown,
@@ -5052,16 +5054,25 @@
 <h2 id="returns">Returns</h2>
 <p>One of:</p>
 <ul>
-<li><code>{ ok: true, value: object }</code>: If value is a plain object.</li>
+<li><code>{ ok: true, value: object }</code>: If the value is a plain object whose prototype is exactly <code>Object.prototype</code>.</li>
 <li><code>{ ok: false, field: string, message: string }</code>: If value is not a plain object.</li>
 </ul>
 <h2 id="behavior">Behavior</h2>
 <ul>
 <li>Uses <a href="../../../type-guards/structural/is-plain-object/">isPlainObject</a> internally.</li>
-<li>Only objects whose prototype is exactly <code>Object.prototype</code> pass.</li>
-<li><code>Object.create(null)</code> fails.</li>
-<li>Arrays, functions, Maps, Sets, Dates, RegExps, and class instances fail.</li>
-<li>Primitives fail.</li>
+<li>Accepts only objects whose prototype is exactly <code>Object.prototype</code>.</li>
+<li><strong>Accepts</strong>:</li>
+<li>Object literals (<code>{}</code>)</li>
+<li>Objects created with <code>new Object()</code></li>
+<li><strong>Rejects</strong>:</li>
+<li><code>null</code></li>
+<li>Arrays</li>
+<li><code>Object.create(null)</code></li>
+<li>Functions</li>
+<li>Built-in objects (<code>Map</code>, <code>Set</code>, <code>Date</code>, <code>RegExp</code>).</li>
+<li>Class instances.</li>
+<li>All primitive values</li>
+<li>Performs no coercion.</li>
 <li>Never throws or mutates input.</li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -5080,7 +5091,10 @@ validatePlainObject([], &quot;arr&quot;)
 <h2 id="notes">Notes</h2>
 <ul>
 <li>This validator is stricter than <a href="../validate-object/">validateObject</a>, which accepts any non-null object.</li>
-<li>Suitable for validating JSON-like structures and configuration objects.</li>
+<li>Use this validator when validating:</li>
+<li>JSON-like data structures</li>
+<li>Configuration objects</li>
+<li>Schema-controlled payloads</li>
 <li>The validator never throws and never mutates input. All error reporting goes through structured <code>ValidationResult</code> objects.</li>
 </ul>
 

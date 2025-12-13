@@ -5019,8 +5019,8 @@
 
 
 <h1 id="validatestring">validateString</h1>
-<p>Checks whether a value is a <strong>primitive string</strong>. This helper performs a strict <code>typeof</code> check and does not coerce other values (like <code>String</code> objects, numbers, booleans, and so on).</p>
-<p>It never throws and never mutates input. Use it when you need to confirm that a value is a string before running further normalization or validation.</p>
+<p>Validates that a value is a <strong>primitive string</strong>. This validator relies on <a href="../../../type-guards/primitives/is-string/">isString</a> internally, performing a strict <code>typeof</code> check without coercion. Only primitive strings pass; String objects, numbers, booleans, symbols, objects, arrays, <code>null</code>, and <code>undefined</code> all fail.</p>
+<p>This helper never throws and never mutates input. Use it when you need to confirm that a value is a string before further normalization or validation.</p>
 <h2 id="signature">Signature</h2>
 <pre><code class="language-ts">function validateString(value: unknown, field: string): ValidationResult&lt;string&gt;
 </code></pre>
@@ -5054,8 +5054,8 @@
 </ul>
 <h2 id="behavior">Behavior</h2>
 <ul>
-<li>Uses <a href="../../../type-guards/primitives/is-non-empty-string/">isNonEmptyString</a> internally.</li>
-<li>Strings with a length greater than 0 pass, including whitespace or zero-width characters.</li>
+<li>Uses <a href="../../../type-guards/primitives/is-non-empty-string/">isString</a> internally.</li>
+<li>Strings with a length greater than <code>0</code> pass, including whitespace or zero-width characters.</li>
 <li>Empty strings and non-string values fail.</li>
 <li>Never throws or mutates input.</li>
 </ul>
