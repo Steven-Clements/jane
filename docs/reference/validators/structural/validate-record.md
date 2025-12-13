@@ -45,11 +45,11 @@ validateRecord({ a: 1, b: "x" }, "data")
 validateRecord({}, "empty")
 // { ok: true, value: {} }
 
+validateRecord(Object.create(null), "nullProto")
+// { ok: true, value: {} }
+
 validateRecord([], "arr")
 // { ok: false, field: "arr", message: "Value must be a record" }
-
-validateRecord(Object.create(null), "nullProto")
-// { ok: false, field: "nullProto", message: "Value must be a record" }
 ```
 
 ## Notes

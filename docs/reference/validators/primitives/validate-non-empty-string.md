@@ -1,8 +1,8 @@
 # validateNonEmptyString
 
-Checks whether a value is a **non‑empty string**. This helper performs a strict string check using isNonEmptyString and ensures the string has length > 0. Whitespace and zero-width characters count as non-empty.
+Validates that a value is a **non-empty string with meaningful content**.
 
-It never throws and never mutates input. Use it when you need a string with meaningful content before running normalization or further validation.
+This helper trims leading and trailing whitespace and rejects strings that are empty after trimming. Zero-width characters (`\u200B`) are treated as empty. Non-string values are also rejected.
 
 ## Signature
 
@@ -53,4 +53,3 @@ validateNonEmptyString(123, "age")
 ## Notes
 
 - Use [validateNonEmptyString](validate-non-empty-string.md) when a string with meaningful content is required.
-- Combine with [normalizeString](../../normalizers/primitives/normalize-string.md) if trimming or other normalization is desired before validation.

@@ -1,86 +1,70 @@
 import { describe, test, expect } from 'vitest';
-import validateSet from '../../../src/validators/collections/validateSet';
+import validateMap from '../../../src/validators/collections/validateMap';
 
-describe('validateSet', () => {
+describe('validateMap', () => {
     const field = 'testField';
 
-    test('returns ok:true for Set instances', () => {
-        const set = new Set<number>([1, 2, 3]);
-        expect(validateSet(set, field)).toEqual({ ok: true, value: set });
+    test('returns ok:true for Map instances', () => {
+        const map = new Map([
+            ['a', 1],
+            ['b', 2],
+        ]);
+        expect(validateMap(map, field)).toEqual({ ok: true, value: map });
     });
 
-    test('accepts wrapper Set objects', () => {
-        const wrapped = Object(new Set(['a']));
-        expect(validateSet(wrapped, field)).toEqual({ ok: true, value: wrapped });
+    test('accepts Map created via Object(...) wrapper', () => {
+        const wrapped = Object(new Map([['x', 42]]));
+        expect(validateMap(wrapped, field)).toEqual({ ok: true, value: wrapped });
     });
 
     test('fails for plain objects', () => {
-        expect(validateSet({ a: 1 }, field)).toEqual({
+        expect(validateMap({ a: 1 }, field)).toEqual({
             ok: false,
             field,
-            message: 'Value must be a Set',
+            message: 'Value must be a Map',
         });
     });
 
     test('fails for arrays', () => {
-        expect(validateSet([], field)).toEqual({
+        expect(validateMap([], field)).toEqual({
             ok: false,
             field,
-            message: 'Value must be a Set',
+            message: 'Value must be a Map',
         });
     });
 
-    test('fails for Map instances', () => {
-        expect(validateSet(new Map(), field)).toEqual({
+    test('fails for Set instances', () => {
+        expect(validateMap(new Set(), field)).toEqual({
             ok: false,
             field,
-            message: 'Value must be a Set',
+            message: 'Value must be a Map',
+        });
+    });
+
+    test('fails for WeakMap instances', () => {
+        expect(validateMap(new WeakMap(), field)).toEqual({
+            ok: false,
+            field,
+            message: 'Value must be a Map',
         });
     });
 
     test('fails for WeakSet instances', () => {
-        expect(validateSet(new WeakSet(), field)).toEqual({
+        expect(validateMap(new WeakSet(), field)).toEqual({
             ok: false,
             field,
-            message: 'Value must be a Set',
+            message: 'Value must be a Map',
         });
     });
 
     test('fails for primitives', () => {
-        expect(validateSet(123, field)).toEqual({
-            ok: false,
-            field,
-            message: 'Value must be a Set',
-        });
-
-        expect(validateSet('abc', field)).toEqual({
-            ok: false,
-            field,
-            message: 'Value must be a Set',
-        });
-
-        expect(validateSet(true, field)).toEqual({
-            ok: false,
-            field,
-            message: 'Value must be a Set',
-        });
-
-        expect(validateSet(null, field)).toEqual({
-            ok: false,
-            field,
-            message: 'Value must be a Set',
-        });
-
-        expect(validateSet(undefined, field)).toEqual({
-            ok: false,
-            field,
-            message: 'Value must be a Set',
-        });
-
-        expect(validateSet(Symbol('x'), field)).toEqual({
-            ok: false,
-            field,
-            message: 'Value must be a Set',
+        const primitives = [123, 'abc', true, false, null, undefined, Symbol('s')];
+        primitives.forEach((val) => {
+            expect(validateMap(val, field)).toEqual({
+                ok: false,
+                field,
+                message: 'Value must be a Map',
+            });
         });
     });
 });
