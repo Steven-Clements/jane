@@ -13,6 +13,7 @@ nav:
     - Overview: reference/overview.md
     - Types:
       - Overview: reference/types/index.md
+      - JSONValue: reference/types/json-value.md
       - ValidationResult: reference/types/validation-result.md
     - Type guards:
       - Overview: reference/type-guards/index.md
@@ -135,8 +136,19 @@ nav:
         - validateWeakSet: reference/validators/collections/validate-weak-set.md
       - Semantic:
         - Overview: reference/validators/semantic/index.md
+        - validateDate: reference/validators/semantic/validate-date.md
+        - validateEnumValue: reference/validators/semantic/validate-enum-value.md
+        - validateError: reference/validators/semantic/validate-error.md
+        - validateFunction: reference/validators/semantic/validate-function.md
+        - validateJSON: reference/validators/semantic/validate-json.md
+        - validatePort: reference/validators/semantic/validate-port.md
+        - validateRegExp: reference/validators/semantic/validate-reg-exp.md
+        - validateTimestamp: reference/validators/semantic/validate-timestamp.md
       - Protocols:
         - Overview: reference/validators/protocols/index.md
+        - validateAsyncIterable: reference/validators/protocols/validate-async-iterable.md
+        - validateIterable: reference/validators/protocols/validate-iterable.md
+        - validatePromise: reference/validators/protocols/validate-promise.md
   - Contributing:
     - Overview: contributing/overview.md
     - Development workflow: contributing/development-workflow.md

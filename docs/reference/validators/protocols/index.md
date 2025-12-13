@@ -4,6 +4,8 @@ Protocols define the core interfaces and behaviors required for composable utili
 
 Protocols are defined as TypeScript interfaces, ensuring that all implementations provide the necessary methods for processing data without side effects.
 
--
+- [validateAsyncIterable](validate-async-iterable.md)
+- [validateIterable](validate-iterable.md)
+- [validatePromise](validate-promise.md)
 
 All protocols are pure, contract-driven, and designed to promote a consistent, decoupled architecture across the entire library.
