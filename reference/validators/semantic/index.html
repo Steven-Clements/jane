@@ -16,7 +16,7 @@
         <link rel="prev" href="../collections/validate-weak-set/">
       
       
-        <link rel="next" href="../protocols/">
+        <link rel="next" href="validate-date/">
       
       
         
@@ -359,6 +359,34 @@
     
   
     Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../types/json-value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSONValue
   
 
     
@@ -4226,6 +4254,230 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateDate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-enum-value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateEnumValue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateError
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateFunction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateJSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-port/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validatePort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-reg-exp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateRegExp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validate-timestamp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateTimestamp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4296,6 +4548,90 @@
     
   
     Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocols/validate-async-iterable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateAsyncIterable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocols/validate-iterable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validateIterable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocols/validate-promise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    validatePromise
   
 
     
@@ -4507,7 +4843,16 @@
 
 <h1 id="overview">Overview</h1>
 <p>Semantic validators ensure that a value not only meets its basic primitive or structural type but also conforms to a conventional meaning or format, such as date strings, email addresses, or specific identifier patterns. They return a structured <code>ValidationResult&lt;T&gt;</code>, never throw exceptions, and never mutate the input value.</p>
-<p>-</p>
+<ul>
+<li><a href="validate-date/">validateDate</a>: Ensures a value is a valid Date instance with a finite timestamp. Rejects invalid Date objects such as new Date("invalid")</li>
+<li><a href="validate-enum-value/">validateEnumValue</a>: Ensures a value is one of the allowed values of a specific enum, including both string and numeric enums.</li>
+<li><a href="validate-error/">validateError</a>: Ensures a value is an Error object, including native error types and custom error subclasses.</li>
+<li><a href="validate-function/">validateFunction</a>: Ensures a value is a callable function with a specific parameter and return type, including arrow functions and class constructors.</li>
+<li><a href="validate-json/">validateJSON</a>: Ensures a value is a valid JSONValue, including primitives, arrays, and plain objects; rejects circular references and non-plain prototypes.</li>
+<li><a href="validate-port/">validatePort</a>: Ensures a value is an integer between 0 and 65535 inclusive, representing a valid TCP/UDP port number.</li>
+<li><a href="validate-reg-exp/">validateRegExp</a>: Ensures a value is a genuine RegExp instance, not a wrapper or custom object.</li>
+<li><a href="validate-timestamp/">validateTimestamp</a>: Ensures a value is a finite integer number representing a Unix timestamp in milliseconds.</li>
+</ul>
 <p>All semantic validators are pure, predictable, and crucial for enforcing data quality based on domain-specific conventions and industry standards.</p>
 
 
