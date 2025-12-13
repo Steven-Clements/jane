@@ -2,48 +2,37 @@ import { describe, it, expect } from 'vitest';
 import validateNonEmptyString from '../../../src/validators/primitives/validateNonEmptyString.js';
 
 describe('validateNonEmptyString', () => {
-    it('returns ok for non-empty strings', () => {
+    it('returns ok:true for valid non-empty strings', () => {
         expect(validateNonEmptyString('hello', 'name')).toEqual({ ok: true, value: 'hello' });
-        expect(validateNonEmptyString(' ', 'space')).toEqual({ ok: true, value: ' ' });
-        expect(validateNonEmptyString('\u200B', 'zeroWidth')).toEqual({
-            ok: true,
-            value: '\u200B',
-        });
+        expect(validateNonEmptyString(' a ', 'padded')).toEqual({ ok: true, value: ' a ' });
     });
 
-    it('returns error for empty strings', () => {
+    it('returns ok:false for empty or whitespace-only strings', () => {
         expect(validateNonEmptyString('', 'empty')).toEqual({
             ok: false,
             field: 'empty',
-            message: 'String cannot be empty',
+            message: 'String cannot be empty or whitespace',
+        });
+        expect(validateNonEmptyString('   ', 'spaces')).toEqual({
+            ok: false,
+            field: 'spaces',
+            message: 'String cannot be empty or whitespace',
+        });
+        expect(validateNonEmptyString('\n\t', 'whitespaceChars')).toEqual({
+            ok: false,
+            field: 'whitespaceChars',
+            message: 'String cannot be empty or whitespace',
         });
     });
 
-    it('returns error for non-string values', () => {
-        expect(validateNonEmptyString(123, 'age')).toEqual({
-            ok: false,
-            field: 'age',
-            message: 'String cannot be empty',
-        });
-        expect(validateNonEmptyString(true, 'flag')).toEqual({
-            ok: false,
-            field: 'flag',
-            message: 'String cannot be empty',
-        });
-        expect(validateNonEmptyString(null, 'missing')).toEqual({
-            ok: false,
-            field: 'missing',
-            message: 'String cannot be empty',
-        });
-        expect(validateNonEmptyString(undefined, 'undef')).toEqual({
-            ok: false,
-            field: 'undef',
-            message: 'String cannot be empty',
-        });
-        expect(validateNonEmptyString({}, 'obj')).toEqual({
-            ok: false,
-            field: 'obj',
-            message: 'String cannot be empty',
-        });
+    it('returns ok:false for non-string values', () => {
+        const invalid: unknown[] = [123, true, false, null, undefined, {}, []];
+        for (const val of invalid) {
+            expect(validateNonEmptyString(val, 'field')).toEqual({
+                ok: false,
+                field: 'field',
+                message: 'String cannot be empty or whitespace',
+            });
+        }
     });
 });

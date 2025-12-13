@@ -1,8 +1,12 @@
 # validatePlainObject
 
-Checks whether a value is a **plain object**. This helper uses the [isPlainObject](../../type-guards/structural/is-plain-object.md) type guard internally. A plain object is one created with `{}` or `new Object()`, where the prototype is exactly `Object.prototype`.
+Checks whether a value is a **plain object**. This helper uses the [isPlainObject](../../type-guards/structural/is-plain-object.md) type guard internally.
 
-It never throws and never mutates input. Use it when you need to ensure that a value is a simple, prototype‑standard object before applying further structural validation.
+A plain object is one created via an object literal (`{}`) or `new Object()`, where the prototype is **exactly `Object.prototype`**.
+
+Objects with a `null` prototype, custom prototypes, or specialized built-in types do not pass this check.
+
+It never throws and never mutates input. Use it when you need to ensure that a value is a simple, prototype-standard object before applying further structural or key-level validation.
 
 ## Signature
 
@@ -24,17 +28,26 @@ function validatePlainObject(
 
 One of:
 
-- `{ ok: true, value: object }`: If value is a plain object.
+- `{ ok: true, value: object }`: If the value is a plain object whose prototype is exactly `Object.prototype`.
 - `{ ok: false, field: string, message: string }`: If value is not a plain object.
 
 ## Behavior
 
 - Uses [isPlainObject](../../type-guards/structural/is-plain-object.md) internally.
-- Only objects whose prototype is exactly `Object.prototype` pass.
-- `Object.create(null)` fails.
-- Arrays, functions, Maps, Sets, Dates, RegExps, and class instances fail.
-- Primitives fail.
-- Never throws or mutates input.
+- Accepts only objects whose prototype is exactly `Object.prototype`.
+- **Accepts**:
+  - Object literals (`{}`)
+  - Objects created with `new Object()`
+- **Rejects**:
+  - `null`
+  - Arrays
+  - `Object.create(null)`
+  - Functions
+  - Built-in objects (`Map`, `Set`, `Date`, `RegExp`).
+  - Class instances.
+  - All primitive values
+  - Performs no coercion.
+  - Never throws or mutates input.
 
 ## Examples
 
@@ -55,5 +68,8 @@ validatePlainObject([], "arr")
 ## Notes
 
 - This validator is stricter than [validateObject](validate-object.md), which accepts any non-null object.
-- Suitable for validating JSON-like structures and configuration objects.
+- Use this validator when validating:
+  - JSON-like data structures
+  - Configuration objects
+  - Schema-controlled payloads
 - The validator never throws and never mutates input. All error reporting goes through structured `ValidationResult` objects.

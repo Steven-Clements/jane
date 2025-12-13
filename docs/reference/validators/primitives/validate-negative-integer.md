@@ -38,7 +38,7 @@ validateNegativeInteger("5", 'stringVal'); // → { ok: false, field: 'stringVal
 
 ## Notes
 
-- Only integer number primitives greater than zero are valid.
+- Only integer number primitives less than zero are valid.
 - Fractional numbers, zero, positive numbers, strings, `NaN`, `Infinity`, and non-numeric types fail.
 
 Use [normalizeNegativeInteger](../../normalizers/primitives/normalize-negative-integer.md) if input may be a string before validation.

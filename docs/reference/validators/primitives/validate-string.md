@@ -1,8 +1,8 @@
 # validateString
 
-Checks whether a value is a **primitive string**. This helper performs a strict `typeof` check and does not coerce other values (like `String` objects, numbers, booleans, and so on).
+Validates that a value is a **primitive string**. This validator relies on [isString](../../type-guards/primitives/is-string.md) internally, performing a strict `typeof` check without coercion. Only primitive strings pass; String objects, numbers, booleans, symbols, objects, arrays, `null`, and `undefined` all fail.
 
-It never throws and never mutates input. Use it when you need to confirm that a value is a string before running further normalization or validation.
+This helper never throws and never mutates input. Use it when you need to confirm that a value is a string before further normalization or validation.
 
 ## Signature
 
@@ -26,8 +26,8 @@ function validateString(value: unknown, field: string): ValidationResult<string>
 
 ## Behavior
 
-- Uses [isNonEmptyString](../../type-guards/primitives/is-non-empty-string.md) internally.
-- Strings with a length greater than 0 pass, including whitespace or zero-width characters.
+- Uses [isString](../../type-guards/primitives/is-non-empty-string.md) internally.
+- Strings with a length greater than `0` pass, including whitespace or zero-width characters.
 - Empty strings and non-string values fail.
 - Never throws or mutates input.
 

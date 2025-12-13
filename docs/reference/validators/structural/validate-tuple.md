@@ -23,9 +23,9 @@ function validateTuple<
 
 | Name | Data type | Description |
 |---|---|---|
-|  | `unknown` | The value to validate. Must be an array of the same length as `guards`. |
-|  | `readonly GuardFn[]` | One guard per tuple position. Each guard must accept `unknown` and return a boolean or type predicate. |
-| field | `string` | The field name used in error reporting. |
+| value  | `unknown` | The value to validate. Must be an array of the same length as `guards`. |
+| guards | `readonly ((value: unknown) => boolean)[]` | One guard per tuple position. |
+| field  | `string` | The field name used in error reporting. |
 
 ## Returns
 
@@ -36,7 +36,7 @@ A `ValidationResult<T>` where `T` is the inferred tuple type:
 
 ## Behavior
 
-- Uses [isTuple](../../validators/structural/validate-tuple.md) internally.
+- Uses [isTuple](../../type-guards/structural/is-tuple.md) internally.
 - Value must be an array.
 - Array length must match the number of guards.
 - Each element must satisfy its corresponding guard.

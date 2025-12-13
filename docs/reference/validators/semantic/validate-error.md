@@ -29,7 +29,7 @@ One of:
 -Accepts `Error` objects and all subclasses.
 -Rejects primitives, objects, arrays, and non-Error values.
 -Performs no coercion.
--Never throws mutates input.
+-Never throws and never mutates input.
 
 ## Examples
 
